@@ -166,7 +166,7 @@ function hydrateSearchControls() {
   const query = document.querySelector("#query");
 
   fillSelect(courseFilter, [["", "すべて"], ...state.catalog.courses.map((course) => [course.id, course.title])]);
-  fillSelect(termFilter, [["", "最新開講期のみ"], ...state.catalog.terms.map((term) => [term.id, term.label])]);
+  fillSelect(termFilter, [["", "すべて"], ["latest", "最新開講期のみ"], ...state.catalog.terms.map((term) => [term.id, term.label])]);
 
   courseFilter.value = params.get("course") || "";
   termFilter.value = params.get("term") || "";
@@ -217,7 +217,11 @@ function updateSearchResults() {
 
   syncTagButtons();
   const results = state.catalog.lessons
-    .filter((lesson) => (termId ? lesson.termId === termId : lesson.isLatestForCourseLesson))
+    .filter((lesson) => {
+      if (!termId) return true;
+      if (termId === "latest") return lesson.isLatestForCourseLesson;
+      return lesson.termId === termId;
+    })
     .filter((lesson) => !courseId || lesson.courseId === courseId)
     .filter((lesson) => !lessonNo || lesson.lessonNo === normalizeLessonNo(lessonNo))
     .filter((lesson) => selectedTagsMatch(lesson))
@@ -436,4 +440,3 @@ function escapeHtml(value) {
     "'": "&#039;"
   })[char]);
 }
-

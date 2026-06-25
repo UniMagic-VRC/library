@@ -8,7 +8,10 @@
   </head>
   <body data-page="search">
     <header class="site-header">
-      <a class="brand" href="./index.html">授業資料</a>
+      <a class="brand" href="./index.html">
+        <img src="./assets/unimagic-logo.svg" alt="UniMagic">
+        <span>授業資料</span>
+      </a>
       <nav class="nav">
         <a href="./index.html">科目</a>
         <a href="./search.html" aria-current="page">全資料検索</a>
@@ -18,7 +21,7 @@
       <section class="page-heading">
         <p class="eyebrow">Search</p>
         <h1>全資料検索</h1>
-        <p>開講期を指定しない場合は、同じ科目・授業回の最新開講期だけを検索します。</p>
+        <p>開講期はすべてを対象に検索します。必要に応じて特定の期や最新版だけに絞り込めます。</p>
       </section>
       <section class="filters" aria-label="検索条件">
         <label>
@@ -54,7 +57,15 @@
         <div id="search-results" class="lesson-list" aria-live="polite"></div>
       </section>
     </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <nav class="footer-nav" aria-label="フッター">
+          <a href="./index.html">科目</a>
+          <a href="./search.html">全資料検索</a>
+        </nav>
+        <p>© UniMagic</p>
+      </div>
+    </footer>
     <script src="./assets/app.js" defer></script>
   </body>
 </html>
-
