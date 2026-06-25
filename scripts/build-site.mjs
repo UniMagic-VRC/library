@@ -22,7 +22,7 @@ const latestMaterialsUrl = "https://unimagic-vrc.github.io/library/";
 const qpdfExecutable = process.env.QPDF || "qpdf";
 const pdfCacheVersion = "pdf-notice-v1";
 const execFileAsync = promisify(execFile);
-const noticeText = "この資料は作成・更新時点の情報に基づいています。ツールやサービスの仕様変更により、内容が古くなっている可能性があります。";
+const noticeText = `この資料は作成・更新時点の情報に基づいています。ツールやサービスの仕様変更により、内容が古くなっている可能性があります。本資料は現状有姿で提供され、いかなる明示・黙示の保証もなく、利用に伴う結果について責任を負いません。`;
 let logoSvgCache;
 let pdfCacheInputsCache;
 
