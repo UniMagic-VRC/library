@@ -9,14 +9,14 @@ export function TagRow({ tags = [] }: { tags?: string[] }) {
   );
 }
 
-export function Pill({ children }: { children: ReactNode }) {
-  return <span className="pill">{children}</span>;
+export function Pill({ children, className }: { children: ReactNode; className?: string }) {
+  return <span className={`pill ${className}`}>{children}</span>;
 }
 
 export function LessonAgeWarningPill({ lastUpdated }: { lastUpdated: string | undefined }) {
   const label = lessonAgeWarningLabel(lastUpdated);
   if (!label) return null;
-  return <span className="pill warning">最終更新から{label}更新されておらず、情報が古い可能性があります。</span>;
+  return <span className="pill warning">最終更新から{label}経過しているため、情報が古い可能性があります。</span>;
 }
 
 export function Notice({ children, tone }: { children: ReactNode; tone?: "error" }) {

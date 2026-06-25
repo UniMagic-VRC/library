@@ -59,9 +59,10 @@ async function main() {
   await fs.mkdir(path.join(distDir, "data"), { recursive: true });
   const processedMaterialFilesByKey = await buildMaterials(materialFilesByKey, lessonMetaByKey);
 
-  const latestKeys = latestLessonKeys(meta.lessons, terms);
+  const latestCourseTermIds = latestCourseTermIdsByCourse(meta.lessons, terms);
   const lessons = meta.lessons.map((lesson) => {
     const key = lessonKey(lesson.termId, lesson.courseId, lesson.lessonNo);
+    const latestCourseTermId = latestCourseTermIds.get(lesson.courseId) || null;
     const files = processedMaterialFilesByKey.get(key) || [];
     const fileUpdatedAt = files
       .map((file) => file.updatedAt)
@@ -78,7 +79,8 @@ async function main() {
       date: lesson.date || null,
       tags: lesson.tags || [],
       lastUpdated,
-      isLatestForCourseLesson: latestKeys.has(courseLessonKey(lesson.courseId, lesson.lessonNo, lesson.termId)),
+      isLatestForCourseTerm: lesson.termId === latestCourseTermId,
+      latestCourseTermId,
       files: files.map(({ absolutePath, updatedAt, ...file }) => file)
     };
   }).sort((a, b) => {
@@ -320,7 +322,7 @@ function drawNoticePage(page, { width, height, regularFont, title, lastUpdated, 
   const body = rgb(0.14, 0.16, 0.18);
   const muted = rgb(0.38, 0.43, 0.48);
   const rule = rgb(0.78, 0.82, 0.86);
-  const label = "UniMagic 資料について";
+  const label = "UniMagic 過去期授業資料";
 
   const labelSize = fitFontSize(label, regularFont, Math.min(18, height * 0.032), contentWidth);
   const titleSize = fitFontSize(title, regularFont, Math.min(34, height * 0.06), contentWidth);
@@ -445,25 +447,20 @@ async function runCommand(command, args, context) {
   }
 }
 
-function latestLessonKeys(lessons, terms) {
-  const latestByCourseLesson = new Map();
+function latestCourseTermIdsByCourse(lessons, terms) {
+  const latestByCourse = new Map();
   for (const lesson of lessons) {
-    const key = `${lesson.courseId}::${lesson.lessonNo}`;
     const startsAt = termStartsAt(terms, lesson.termId);
-    const current = latestByCourseLesson.get(key);
+    const current = latestByCourse.get(lesson.courseId);
     if (!current || startsAt > current.startsAt) {
-      latestByCourseLesson.set(key, { startsAt, termId: lesson.termId, courseId: lesson.courseId, lessonNo: lesson.lessonNo });
+      latestByCourse.set(lesson.courseId, { startsAt, termId: lesson.termId });
     }
   }
-  return new Set([...latestByCourseLesson.values()].map((lesson) => courseLessonKey(lesson.courseId, lesson.lessonNo, lesson.termId)));
+  return new Map([...latestByCourse.entries()].map(([courseId, lesson]) => [courseId, lesson.termId]));
 }
 
 function termStartsAt(terms, termId) {
   return terms.find((term) => term.id === termId)?.startsAt || "";
-}
-
-function courseLessonKey(courseId, lessonNo, termId) {
-  return `${courseId}::${lessonNo}::${termId}`;
 }
 
 function lessonKey(termId, courseId, lessonNo) {

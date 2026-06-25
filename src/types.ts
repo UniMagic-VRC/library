@@ -29,7 +29,8 @@ export type Lesson = {
   date: string | null;
   tags: string[];
   lastUpdated?: string;
-  isLatestForCourseLesson: boolean;
+  isLatestForCourseTerm: boolean;
+  latestCourseTermId: string | null;
   files: LessonFile[];
 };
 

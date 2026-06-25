@@ -26,7 +26,7 @@ export function SearchPage({ catalog }: { catalog: Catalog }) {
   const results = catalog.lessons
     .filter((lesson) => {
       if (!termId) return true;
-      if (termId === "latest") return lesson.isLatestForCourseLesson;
+      if (termId === "latest") return lesson.isLatestForCourseTerm;
       return lesson.termId === termId;
     })
     .filter((lesson) => !courseId || lesson.courseId === courseId)
@@ -51,7 +51,7 @@ export function SearchPage({ catalog }: { catalog: Catalog }) {
       <section className="page-heading">
         <p className="eyebrow">Search</p>
         <h1>全資料検索</h1>
-        <p>開講期はすべてを対象に検索します。必要に応じて特定の期や最新版だけに絞り込めます。</p>
+        <p>開講期はすべてを対象に検索します。必要に応じて特定の期や最新開講期だけに絞り込めます。</p>
       </section>
       <section className="filters" aria-label="検索条件">
         <label>

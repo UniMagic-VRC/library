@@ -20,12 +20,20 @@
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root > main {
+  flex: 1;
 }
 
 a {
@@ -97,6 +105,9 @@ a {
 
 .page-heading {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .page-heading h1 {
@@ -147,11 +158,17 @@ a {
   box-shadow: var(--shadow);
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card {
   display: grid;
   gap: 14px;
   padding: 20px;
   text-decoration: none;
+  align-content: start;
 }
 
 .card h3,
@@ -239,6 +256,9 @@ a {
   background: var(--surface);
   color: var(--text);
   border-color: var(--line);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .segmented button[aria-pressed="true"],
@@ -251,6 +271,13 @@ a {
 
 .button.secondary {
   background: var(--surface-strong);
+}
+
+.button.warning{
+  border: 1px solid #fdba74;
+  background: #fff7ed;
+  color: var(--warning);
+  width: fit-content;
 }
 
 .lesson-list,

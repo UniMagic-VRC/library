@@ -1,5 +1,5 @@
-import { compareLessonVersion, findCourse, findLesson, findTerm, formatBytes, formatDate } from "../catalog";
-import { LessonCard } from "../components/LessonCard";
+import { FileSymlink } from "lucide-react";
+import { findCourse, findLesson, findTerm, formatBytes, formatDate } from "../catalog";
 import { LessonAgeWarningPill, Notice, Pill, TagRow } from "../components/ui";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import type { Catalog } from "../types";
@@ -9,6 +9,7 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
   const lesson = findLesson(catalog, params.get("term"), params.get("course"), params.get("lesson"));
   const course = lesson ? findCourse(catalog, lesson.courseId) : undefined;
   const term = lesson ? findTerm(catalog, lesson.termId) : undefined;
+  const latestTerm = lesson ? findTerm(catalog, lesson.latestCourseTermId) : undefined;
 
   useDocumentTitle(lesson ? `${lesson.title} | 授業資料` : "授業 | UniMagic 過去期授業資料ライブラリ");
 
@@ -23,11 +24,6 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
     );
   }
 
-  const versions = catalog.lessons
-    .filter((candidate) => candidate.courseId === lesson.courseId && candidate.lessonNo === lesson.lessonNo)
-    .sort((a, b) => compareLessonVersion(catalog, a, b))
-    .filter((candidate) => candidate.id !== lesson.id);
-
   return (
     <>
       <nav className="breadcrumb">
@@ -38,12 +34,18 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
         <h1>{lesson.title}</h1>
         <p>{lesson.description || ""}</p>
         <div className="meta-row">
-          <Pill>最終更新 {formatDate(lesson.lastUpdated)}</Pill>
           <LessonAgeWarningPill lastUpdated={lesson.lastUpdated} />
-          {lesson.isLatestForCourseLesson ? <Pill>最新版</Pill> : <Pill>過去開講期</Pill>}
+          {lesson.isLatestForCourseTerm ? <Pill>最新版</Pill> : <Pill className="warning">過去開講期</Pill>}
+          <Pill>最終更新 {formatDate(lesson.lastUpdated)}</Pill>
         </div>
         <TagRow tags={[...(course.tags || []), ...lesson.tags]} />
       </section>
+
+      {!lesson.isLatestForCourseTerm && (
+        <a className="button warning" href={`./course.html?id=${encodeURIComponent(course.id)}&term=${encodeURIComponent(lesson.latestCourseTermId || lesson.termId)}`}>
+          <FileSymlink /> より新しい開講期{latestTerm ? `（${latestTerm.label}）` : ""}の資料があります
+        </a>
+      )}
       <section>
         <div className="section-title">
           <h2>資料</h2>
@@ -59,15 +61,6 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
               <iframe className="pdf-frame" src={file.path} title={file.name} loading="lazy" />
             </article>
           ))}
-        </div>
-      </section>
-      <section>
-        <div className="section-title">
-          <h2>他開講期の同じ授業</h2>
-        </div>
-        <div className="lesson-list" aria-live="polite">
-          {versions.map((version) => <LessonCard key={version.id} catalog={catalog} lesson={version} />)}
-          {!versions.length && <Notice>他開講期の同じ授業はありません。</Notice>}
         </div>
       </section>
     </>
