@@ -23,8 +23,8 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
   if (!course) {
     return (
       <>
-        <nav className="breadcrumb"><a href="./index.html">科目一覧</a></nav>
-        <section className="page-heading">
+        <nav className="mb-[18px]"><a className="font-bold text-accent-strong no-underline" href="./index.html">科目一覧</a></nav>
+        <section className="mb-[30px] flex flex-col gap-2">
           <Notice tone="error">科目が見つかりません。</Notice>
         </section>
       </>
@@ -43,22 +43,23 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
 
   return (
     <>
-      <nav className="breadcrumb"><a href="./index.html">科目一覧</a></nav>
-      <section className="page-heading">
-        <p className="eyebrow">Course</p>
-        <h1>{course.title}</h1>
-        <p>{course.description || ""}</p>
+      <nav className="mb-[18px]"><a className="font-bold text-accent-strong no-underline" href="./index.html">科目一覧</a></nav>
+      <section className="mb-[30px] flex flex-col gap-2">
+        <p className="m-0 max-w-[980px] text-[13px] font-extrabold tracking-normal text-accent-strong uppercase">Course</p>
+        <h1 className="mt-1 mb-2 text-[clamp(30px,5vw,52px)] leading-[1.12]">{course.title}</h1>
+        <p className="m-0 max-w-[980px] text-muted">{course.description || ""}</p>
         <TagRow tags={course.tags} />
       </section>
       <section>
-        <div className="section-title">
-          <h2>開講期</h2>
-          <span className="muted">{terms.length} 開講期</span>
+        <div className="mt-[34px] mb-3.5 flex items-center justify-between gap-4">
+          <h2 className="m-0 text-xl">開講期</h2>
+          <span className="text-sm text-muted">{terms.length} 開講期</span>
         </div>
-        <div className="segmented" role="tablist" aria-label="開講期">
+        <div className="flex flex-wrap gap-2" role="tablist" aria-label="開講期">
           {terms.map((term) => (
             <button
               key={term.id}
+              className="flex min-h-[38px] cursor-pointer flex-row items-center rounded-lg border border-line bg-surface px-[13px] py-2 font-[inherit] text-ink aria-pressed:border-accent aria-pressed:bg-accent aria-pressed:text-white"
               type="button"
               aria-pressed={term.id === selectedTermId}
               onClick={() => selectTerm(term.id)}
@@ -69,11 +70,11 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
         </div>
       </section>
       <section>
-        <div className="section-title">
-          <h2>授業回</h2>
-          <a className="text-link" href={`./search.html?course=${encodeURIComponent(currentCourse.id)}`}>この科目を検索</a>
+        <div className="mt-[34px] mb-3.5 flex items-center justify-between gap-4">
+          <h2 className="m-0 text-xl">授業回</h2>
+          <a className="font-bold text-accent-strong no-underline" href={`./search.html?course=${encodeURIComponent(currentCourse.id)}`}>この科目を検索</a>
         </div>
-        <div className="lesson-list" aria-live="polite">
+        <div className="grid gap-2" aria-live="polite">
           {lessons.map((lesson) => <LessonCard key={lesson.id} catalog={catalog} lesson={lesson} />)}
           {!lessons.length && <Notice>この開講期の授業は登録されていません。</Notice>}
         </div>

@@ -22,7 +22,7 @@ export function App() {
   return (
     <>
       <SiteHeader page={page} />
-      <main className="shell">
+      <main className="mx-auto w-[min(1600px,calc(100%-24px))] flex-1 py-10 pb-[72px]">
         {error && <Notice tone="error">{error}</Notice>}
         {!error && !catalog && <Notice>読み込み中です。</Notice>}
         {!error && catalog && <PageContent page={page} catalog={catalog} />}
