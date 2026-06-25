@@ -128,6 +128,7 @@ function renderLesson() {
     el("p", {}, lesson.description || ""),
     el("div", { className: "meta-row" }, [
       pill(`最終更新 ${formatDate(lesson.lastUpdated)}`),
+      lessonAgeWarningPill(lesson.lastUpdated),
       lesson.isLatestForCourseLesson ? pill("最新版") : pill("過去開講期")
     ]),
     tagRow([...course.tags, ...lesson.tags])
@@ -251,6 +252,7 @@ function lessonCard(lesson, options = {}) {
         el("div", { className: "meta-row" }, [
           pill(term.label),
           pill(`最終更新 ${formatDate(lesson.lastUpdated)}`),
+          lessonAgeWarningPill(lesson.lastUpdated),
           lesson.isLatestForCourseLesson ? pill("最新版") : pill("過去開講期")
         ])
       ]),
@@ -366,6 +368,39 @@ function compareLessonVersion(a, b) {
   return compareLessonNo(a, b);
 }
 
+function lessonAgeWarningPill(lastUpdated) {
+  const label = lessonAgeWarningLabel(lastUpdated);
+  if (!label) return "";
+  return warningPill(`最終更新から${label}更新されておらず、情報が古い可能性があります。`);
+}
+
+function lessonAgeWarningLabel(lastUpdated) {
+  const months = lessonAgeInMonths(lastUpdated);
+  if (months === null) return "";
+  if (months >= 24) return "2年以上";
+  if (months >= 12) return "1年以上";
+  if (months >= 6) return "6か月以上";
+  return "";
+}
+
+function lessonAgeInMonths(lastUpdated) {
+  const updated = parseLessonDate(lastUpdated);
+  if (!updated) return null;
+  const today = new Date();
+  let months = (today.getFullYear() - updated.getFullYear()) * 12 + (today.getMonth() - updated.getMonth());
+  if (today.getDate() < updated.getDate()) months -= 1;
+  return Math.max(0, months);
+}
+
+function parseLessonDate(value) {
+  if (!value) return null;
+  const parsed = new Date(`${value}T00:00:00`);
+  if (!Number.isNaN(parsed.getTime())) return parsed;
+  const fallback = new Date(value);
+  if (!Number.isNaN(fallback.getTime())) return fallback;
+  return null;
+}
+
 function lessonHref(lesson) {
   return `./lesson.html?term=${encodeURIComponent(lesson.termId)}&course=${encodeURIComponent(lesson.courseId)}&lesson=${encodeURIComponent(lesson.lessonNo)}`;
 }
@@ -401,6 +436,10 @@ function tagRow(tags = []) {
 
 function pill(text) {
   return el("span", { className: "pill" }, text);
+}
+
+function warningPill(text) {
+  return el("span", { className: "pill warning" }, text);
 }
 
 function notice(text) {
