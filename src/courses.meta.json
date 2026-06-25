@@ -1,0 +1,1398 @@
+{
+  "terms": [
+    {
+      "id": "term-00",
+      "label": "0期",
+      "startsAt": "2023-06-01"
+    },
+    {
+      "id": "term-01",
+      "label": "1期",
+      "startsAt": "2023-09-01"
+    },
+    {
+      "id": "term-02a",
+      "label": "2期A",
+      "startsAt": "2024-02-01"
+    },
+    {
+      "id": "term-02b",
+      "label": "2期B",
+      "startsAt": "2024-03-01"
+    },
+    {
+      "id": "term-03",
+      "label": "3期",
+      "startsAt": "2024-06-01"
+    },
+    {
+      "id": "term-04",
+      "label": "4期",
+      "startsAt": "2024-09-01"
+    },
+    {
+      "id": "term-05",
+      "label": "5期",
+      "startsAt": "2025-02-01"
+    },
+    {
+      "id": "term-06",
+      "label": "6期",
+      "startsAt": "2025-06-01"
+    },
+    {
+      "id": "term-07",
+      "label": "7期",
+      "startsAt": "2025-10-01"
+    }
+  ],
+  "courses": [
+    {
+      "id": "blender-basic",
+      "title": "Blender本科",
+      "description": "Blenderによるモデリング、リギング、UV、Unity連携の基礎を扱う本科授業です。",
+      "tags": [
+        "blender",
+        "modeling",
+        "3d",
+        "basic"
+      ]
+    },
+    {
+      "id": "unity-basic",
+      "title": "Unity本科",
+      "description": "Unityを使ったVRChatアバター改変の基礎を扱う本科授業です。",
+      "tags": [
+        "unity",
+        "avatar",
+        "vrchat",
+        "basic"
+      ]
+    },
+    {
+      "id": "avatar-gimmick-basic",
+      "title": "アバターギミック本科",
+      "description": "Animation、Animator、Expression Menuなどを使ったVRChatアバターギミック制作を扱う本科授業です。",
+      "tags": [
+        "unity",
+        "avatar",
+        "gimmick",
+        "vrchat"
+      ]
+    },
+    {
+      "id": "particle-live",
+      "title": "パーティクルライブ科",
+      "description": "Timeline、Particle System、Shaderを使ったパーティクルライブ制作を扱う授業です。",
+      "tags": [
+        "unity",
+        "particle",
+        "live",
+        "timeline"
+      ]
+    },
+    {
+      "id": "world-specialized",
+      "title": "ワールド専科",
+      "description": "VRChatワールド制作に必要なPrefab、同期、エラー対応、軽量化を扱う専科授業です。",
+      "tags": [
+        "unity",
+        "world",
+        "vrchat",
+        "advanced"
+      ]
+    }
+  ],
+  "lessons": [
+    {
+      "termId": "term-00",
+      "courseId": "unity-basic",
+      "lessonNo": "01",
+      "title": "Welcome to UniMagic!",
+      "description": "Welcome to UniMagic! の授業資料です。",
+      "date": "2023-06-25",
+      "tags": [
+        "avatar",
+        "basic",
+        "orientation",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-00",
+      "courseId": "unity-basic",
+      "lessonNo": "02",
+      "title": "素材が変われば色も変わる",
+      "description": "素材が変われば色も変わる の授業資料です。",
+      "date": "2023-06-23",
+      "tags": [
+        "avatar",
+        "basic",
+        "color",
+        "material",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-00",
+      "courseId": "unity-basic",
+      "lessonNo": "03",
+      "title": "アイテムは装備しないと使えない",
+      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "date": "2023-06-27",
+      "tags": [
+        "accessory",
+        "avatar",
+        "basic",
+        "bone",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-00",
+      "courseId": "unity-basic",
+      "lessonNo": "04",
+      "title": "身に纏うは無窮の風",
+      "description": "身に纏うは無窮の風 の授業資料です。",
+      "date": "2023-06-29",
+      "tags": [
+        "avatar",
+        "basic",
+        "clothing",
+        "skinning",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-01",
+      "courseId": "unity-basic",
+      "lessonNo": "01",
+      "title": "Welcome to UniMagic!",
+      "description": "Welcome to UniMagic! の授業資料です。",
+      "date": "2023-09-29",
+      "tags": [
+        "avatar",
+        "basic",
+        "orientation",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-01",
+      "courseId": "unity-basic",
+      "lessonNo": "02",
+      "title": "素材が変われば色も変わる",
+      "description": "素材が変われば色も変わる の授業資料です。",
+      "date": "2023-09-29",
+      "tags": [
+        "avatar",
+        "basic",
+        "color",
+        "material",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-01",
+      "courseId": "unity-basic",
+      "lessonNo": "03",
+      "title": "アイテムは装備しないと使えない",
+      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "date": "2023-09-29",
+      "tags": [
+        "accessory",
+        "avatar",
+        "basic",
+        "bone",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-01",
+      "courseId": "unity-basic",
+      "lessonNo": "04",
+      "title": "身に纏うは無窮の風",
+      "description": "身に纏うは無窮の風 の授業資料です。",
+      "date": "2023-09-29",
+      "tags": [
+        "avatar",
+        "basic",
+        "clothing",
+        "skinning",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-02a",
+      "courseId": "world-specialized",
+      "lessonNo": "00",
+      "title": "What is UniMagic for Your Next World",
+      "description": "What is UniMagic for Your Next World の授業資料です。",
+      "date": "2024-02-12",
+      "tags": [
+        "advanced",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02a",
+      "courseId": "world-specialized",
+      "lessonNo": "01",
+      "title": "きみ、流れるようにあんぱっくしたね？",
+      "description": "きみ、流れるようにあんぽっくしたね？ の授業資料です。",
+      "date": "2024-02-13",
+      "tags": [
+        "advanced",
+        "prefab",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02a",
+      "courseId": "world-specialized",
+      "lessonNo": "02",
+      "title": "君たちはどうきいるか",
+      "description": "君たちはどうきいるか の授業資料です。",
+      "date": "2024-02-14",
+      "tags": [
+        "advanced",
+        "sync",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02a",
+      "courseId": "world-specialized",
+      "lessonNo": "03",
+      "title": "エラーと向き合う",
+      "description": "エラーと向き合う の授業資料です。",
+      "date": "2024-02-15",
+      "tags": [
+        "advanced",
+        "debug",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02a",
+      "courseId": "world-specialized",
+      "lessonNo": "04",
+      "title": "その想い、重すぎて。",
+      "description": "その想い、重すぎて。 の授業資料です。",
+      "date": "2024-02-22",
+      "tags": [
+        "advanced",
+        "performance",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02b",
+      "courseId": "world-specialized",
+      "lessonNo": "00",
+      "title": "What is UniMagic for Your Next World",
+      "description": "What is UniMagic for Your Next World の授業資料です。",
+      "date": "2024-03-11",
+      "tags": [
+        "advanced",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02b",
+      "courseId": "world-specialized",
+      "lessonNo": "01",
+      "title": "きみ、流れるようにあんぱっくしたね？",
+      "description": "きみ、流れるようにあんぱっくしたね？ の授業資料です。",
+      "date": "2024-03-12",
+      "tags": [
+        "advanced",
+        "prefab",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02b",
+      "courseId": "world-specialized",
+      "lessonNo": "02",
+      "title": "君たちはどうきいるか",
+      "description": "君たちはどうきいるか の授業資料です。",
+      "date": "2024-03-14",
+      "tags": [
+        "advanced",
+        "sync",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02b",
+      "courseId": "world-specialized",
+      "lessonNo": "03",
+      "title": "エラーと向き合う",
+      "description": "エラーと向き合う の授業資料です。",
+      "date": "2024-03-14",
+      "tags": [
+        "advanced",
+        "debug",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-02b",
+      "courseId": "world-specialized",
+      "lessonNo": "04",
+      "title": "その想い、重すぎて。",
+      "description": "その想い、重すぎて。 の授業資料です。",
+      "date": "2024-03-21",
+      "tags": [
+        "advanced",
+        "performance",
+        "unity",
+        "vrchat",
+        "world"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "01",
+      "title": "Let's make it 0 to 1",
+      "description": "Let s make it 0 to 1 の授業資料です。",
+      "date": "2024-06-12",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "02",
+      "title": "お前はもう、動いている",
+      "description": "お前はもう、動いている の授業資料です。",
+      "date": "2024-06-12",
+      "tags": [
+        "animation",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "03",
+      "title": "アバターギミック、アッセンブル!",
+      "description": "アバターギミック、アッセンブル! の授業資料です。",
+      "date": "2024-06-12",
+      "tags": [
+        "animation",
+        "animator",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "04",
+      "title": "俺はパーを出したぞ！(宣言)",
+      "description": "俺はパーを出したぞ(宣言) の授業資料です。",
+      "date": "2024-06-13",
+      "tags": [
+        "avatar",
+        "expression-menu",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "05",
+      "title": "プログラミング的思考のススメ",
+      "description": "プログラミング的思考のススメ の授業資料です。",
+      "date": "2024-06-21",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "programming-thinking",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "unity-basic",
+      "lessonNo": "00",
+      "title": "Welcome to UniMagic!",
+      "description": "Welcome to UniMagic! の授業資料です。",
+      "date": "2024-06-09",
+      "tags": [
+        "avatar",
+        "basic",
+        "orientation",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "unity-basic",
+      "lessonNo": "01",
+      "title": "“魔法”のことはじめ",
+      "description": "“魔法”のことはじめ の授業資料です。",
+      "date": "2024-06-11",
+      "tags": [
+        "avatar",
+        "basic",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "unity-basic",
+      "lessonNo": "02",
+      "title": "素材が変われば色も変わる",
+      "description": "素材が変われば色も変わる の授業資料です。",
+      "date": "2024-06-13",
+      "tags": [
+        "avatar",
+        "basic",
+        "color",
+        "material",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "unity-basic",
+      "lessonNo": "03",
+      "title": "アイテムは装備しないと使えない",
+      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "date": "2024-06-14",
+      "tags": [
+        "accessory",
+        "avatar",
+        "basic",
+        "bone",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-03",
+      "courseId": "unity-basic",
+      "lessonNo": "04",
+      "title": "身に纏うは無窮の風",
+      "description": "身に纏うは無窮の風 の授業資料です。",
+      "date": "2024-06-14",
+      "tags": [
+        "avatar",
+        "basic",
+        "clothing",
+        "skinning",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "blender-basic",
+      "lessonNo": "01",
+      "title": "はじめの一歩、もう一度！",
+      "description": "はじめの一歩、もう一度！ の授業資料です。",
+      "date": "2024-09-11",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "blender-basic",
+      "lessonNo": "02",
+      "title": "点、線、面、立体",
+      "description": "点、線、面、立体 の授業資料です。",
+      "date": "2024-09-11",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "blender-basic",
+      "lessonNo": "03",
+      "title": "Bling-Bang-Bang-\"Bone\"",
+      "description": "Bling-Bang-Bang- Bone の授業資料です。",
+      "date": "2024-09-16",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "bone",
+        "modeling",
+        "skinning"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "blender-basic",
+      "lessonNo": "04",
+      "title": "UVなのに、目に見える！",
+      "description": "UVなのに、目に見える！ の授業資料です。",
+      "date": "2024-09-18",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling",
+        "uv"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "blender-basic",
+      "lessonNo": "05",
+      "title": "Create, Share, Play.",
+      "description": "Create, Share, Play. の授業資料です。",
+      "date": "2024-09-20",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "fbx",
+        "modeling",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "blender-basic",
+      "lessonNo": "06",
+      "title": "Blender本科修了制作",
+      "description": "Blender本科修了制作 の授業資料です。",
+      "date": "2024-09-20",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling",
+        "production"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "unity-basic",
+      "lessonNo": "00",
+      "title": "Welcome to UniMagic!",
+      "description": "Welcome to UniMagic! の授業資料です。",
+      "date": "2024-09-09",
+      "tags": [
+        "avatar",
+        "basic",
+        "orientation",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "unity-basic",
+      "lessonNo": "01",
+      "title": "魔法 のことはじめ",
+      "description": "魔法 のことはじめ の授業資料です。",
+      "date": "2024-09-09",
+      "tags": [
+        "avatar",
+        "basic",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "unity-basic",
+      "lessonNo": "02",
+      "title": "素材が変われば色も変わる",
+      "description": "素材が変われば色も変わる の授業資料です。",
+      "date": "2024-09-10",
+      "tags": [
+        "avatar",
+        "basic",
+        "color",
+        "material",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "unity-basic",
+      "lessonNo": "03",
+      "title": "アイテムは装備しないと使えない",
+      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "date": "2024-09-09",
+      "tags": [
+        "accessory",
+        "avatar",
+        "basic",
+        "bone",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-04",
+      "courseId": "unity-basic",
+      "lessonNo": "04",
+      "title": "身に纏うは無窮の風",
+      "description": "身に纏うは無窮の風 の授業資料です。",
+      "date": "2024-09-09",
+      "tags": [
+        "avatar",
+        "basic",
+        "clothing",
+        "skinning",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "01",
+      "title": "Let's make it 0 to 1",
+      "description": "アバターギミック本科_基盤授業1限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "02",
+      "title": "お前はもう、動いている",
+      "description": "アバターギミック本科_基盤授業2限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "animation",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "03",
+      "title": "アバターギミック、アッセンブル!",
+      "description": "アバターギミック本科_基盤授業3限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "animation",
+        "animator",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "04",
+      "title": "俺はパーを出したぞ！(宣言)",
+      "description": "アバターギミック本科_基盤授業4限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "expression-menu",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "05",
+      "title": "プログラミング的思考のススメ",
+      "description": "アバターギミック本科_基盤授業5限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "programming-thinking",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "06",
+      "title": "How to Debug?",
+      "description": "アバターギミック本科_基盤授業6限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "debug",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "07",
+      "title": "今どき流行りのModular Avatar",
+      "description": "アバターギミック本科_基盤授業7限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "modular-avatar",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "blender-basic",
+      "lessonNo": "01",
+      "title": "はじめの一歩、もう一度！",
+      "description": "はじめの一歩、もう一度！ の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "blender-basic",
+      "lessonNo": "02",
+      "title": "点、線、面、立体",
+      "description": "点、線、面、立体 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "blender-basic",
+      "lessonNo": "03",
+      "title": "Bling-Bang-Bang-\"Bone\"",
+      "description": "Bling-Bang-Bang- Bone の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "bone",
+        "modeling",
+        "skinning"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "blender-basic",
+      "lessonNo": "04",
+      "title": "UVなのに、目に見える！",
+      "description": "UVなのに、目に見える！ の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling",
+        "uv"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "blender-basic",
+      "lessonNo": "05",
+      "title": "Create, Share, Play",
+      "description": "Create, Share, Play の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "fbx",
+        "modeling",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "unity-basic",
+      "lessonNo": "00",
+      "title": "Welcome to UniMagic!",
+      "description": "Welcome to UniMagic! の授業資料です。",
+      "date": "2024-11-30",
+      "tags": [
+        "avatar",
+        "basic",
+        "orientation",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "unity-basic",
+      "lessonNo": "01",
+      "title": "魔法のことはじめ",
+      "description": "魔法のことはじめ の授業資料です。",
+      "date": "2024-11-30",
+      "tags": [
+        "avatar",
+        "basic",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "unity-basic",
+      "lessonNo": "02",
+      "title": "素材が変われば色も変わる",
+      "description": "素材が変われば色も変わる の授業資料です。",
+      "date": "2024-12-04",
+      "tags": [
+        "avatar",
+        "basic",
+        "color",
+        "material",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "unity-basic",
+      "lessonNo": "03",
+      "title": "アイテムは装備しないと使えない",
+      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "date": "2024-11-30",
+      "tags": [
+        "accessory",
+        "avatar",
+        "basic",
+        "bone",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "unity-basic",
+      "lessonNo": "04",
+      "title": "身に纏うは無窮の風",
+      "description": "身に纏うは無窮の風 の授業資料です。",
+      "date": "2024-12-06",
+      "tags": [
+        "avatar",
+        "basic",
+        "clothing",
+        "skinning",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-05",
+      "courseId": "unity-basic",
+      "lessonNo": "05",
+      "title": "Unity本科修了制作",
+      "description": "Unity本科修了制作 の授業資料です。",
+      "date": "2024-12-06",
+      "tags": [
+        "avatar",
+        "basic",
+        "production",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "01",
+      "title": "Let's make it 0 to 1",
+      "description": "アバターギミック本科_基盤授業1限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "02",
+      "title": "お前はもう、動いている",
+      "description": "アバターギミック本科_基盤授業2限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "animation",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "03",
+      "title": "アバターギミック、アッセンブル!",
+      "description": "アバターギミック本科_基盤授業3限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "animation",
+        "animator",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "04",
+      "title": "俺はパーを出したぞ！(宣言)",
+      "description": "アバターギミック本科_基盤授業4限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "expression-menu",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "05",
+      "title": "プログラミング的思考のススメ",
+      "description": "アバターギミック本科_基盤授業5限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "programming-thinking",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "06",
+      "title": "How to Debug?",
+      "description": "アバターギミック本科_基盤授業6限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "debug",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "07",
+      "title": "今どき流行りのModular Avatar",
+      "description": "アバターギミック本科_基盤授業7限目 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "modular-avatar",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "particle-live",
+      "lessonNo": "01",
+      "title": "パーティクルライブの一歩目を",
+      "description": "パーティクルライブの一歩目を の授業資料です。",
+      "date": "2025-09-28",
+      "tags": [
+        "live",
+        "particle",
+        "particle-system",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "particle-live",
+      "lessonNo": "02",
+      "title": "パーティクルライブの目録を",
+      "description": "パーティクルライブの目録を の授業資料です。",
+      "date": "2025-09-30",
+      "tags": [
+        "live",
+        "particle",
+        "particle-system",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "particle-live",
+      "lessonNo": "03",
+      "title": "パーティクルライブの散在を",
+      "description": "パーティクルライブの散在を の授業資料です。",
+      "date": "2025-10-02",
+      "tags": [
+        "live",
+        "particle",
+        "particle-system",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "particle-live",
+      "lessonNo": "04",
+      "title": "パーティクルライブの現像を",
+      "description": "パーティクルライブの現像を の授業資料です。",
+      "date": "2025-10-06",
+      "tags": [
+        "live",
+        "particle",
+        "particle-system",
+        "shader",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "particle-live",
+      "lessonNo": "05",
+      "title": "魅力的な「動き」を作ろう",
+      "description": "魅力的な「動き」を作ろう (2) の授業資料です。",
+      "date": "2025-10-08",
+      "tags": [
+        "live",
+        "motion",
+        "particle",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "unity-basic",
+      "lessonNo": "00",
+      "title": "Welcome to UniMagic!",
+      "description": "Welcome to UniMagic! の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "basic",
+        "orientation",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "unity-basic",
+      "lessonNo": "01",
+      "title": "魔法のことはじめ",
+      "description": "魔法のことはじめ の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "basic",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "unity-basic",
+      "lessonNo": "02",
+      "title": "素材が変われば色も変わる",
+      "description": "素材が変われば色も変わる の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "basic",
+        "color",
+        "material",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "unity-basic",
+      "lessonNo": "03",
+      "title": "アイテムは装備しないと使えない",
+      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "accessory",
+        "avatar",
+        "basic",
+        "bone",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-06",
+      "courseId": "unity-basic",
+      "lessonNo": "04",
+      "title": "身に纏うは無窮の風",
+      "description": "身に纏うは無窮の風 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "avatar",
+        "basic",
+        "clothing",
+        "skinning",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "01",
+      "title": "UniMagicへようこそ",
+      "description": "UniMagicへようこそ の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling",
+        "orientation"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "02",
+      "title": "点・線・面・立体",
+      "description": "点・線・面・立体 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "05",
+      "title": "Blenderの極意",
+      "description": "Blenderの極意 の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "fbx",
+        "modeling",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "06",
+      "title": "骨を作ってみよう",
+      "description": "骨を作ってみよう の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "bone",
+        "modeling",
+        "production"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "08",
+      "title": "変形するモデル",
+      "description": "変形するモデル の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "modeling",
+        "skinning"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "10",
+      "title": "Go to Unity",
+      "description": "Go to Unity の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "fbx",
+        "modeling",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "11",
+      "title": "見た目を整えよう",
+      "description": "見た目を整えよう の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "color",
+        "modeling",
+        "texture",
+        "uv"
+      ]
+    },
+    {
+      "termId": "term-07",
+      "courseId": "blender-basic",
+      "lessonNo": "13",
+      "title": "Create Share Play",
+      "description": "Create Share Play の授業資料です。",
+      "date": "2026-06-25",
+      "tags": [
+        "3d",
+        "basic",
+        "blender",
+        "fbx",
+        "modeling",
+        "unity"
+      ]
+    }
+  ],
+  "searchViews": [
+    {
+      "id": "unity-avatar",
+      "label": "Unity / アバター",
+      "tags": [
+        "unity",
+        "avatar"
+      ]
+    },
+    {
+      "id": "blender-modeling",
+      "label": "Blender / モデリング",
+      "tags": [
+        "blender",
+        "modeling"
+      ]
+    },
+    {
+      "id": "gimmick-animation",
+      "label": "ギミック / Animation",
+      "tags": [
+        "gimmick",
+        "animation"
+      ]
+    },
+    {
+      "id": "world-debug",
+      "label": "ワールド / デバッグ",
+      "tags": [
+        "world",
+        "debug"
+      ]
+    },
+    {
+      "id": "particle-live",
+      "label": "パーティクルライブ",
+      "tags": [
+        "particle",
+        "live"
+      ]
+    }
+  ]
+}

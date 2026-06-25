@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>全資料検索 | 授業資料</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+  </head>
+  <body data-page="search">
+    <header class="site-header">
+      <a class="brand" href="./index.html">授業資料</a>
+      <nav class="nav">
+        <a href="./index.html">科目</a>
+        <a href="./search.html" aria-current="page">全資料検索</a>
+      </nav>
+    </header>
+    <main class="shell">
+      <section class="page-heading">
+        <p class="eyebrow">Search</p>
+        <h1>全資料検索</h1>
+        <p>開講期を指定しない場合は、同じ科目・授業回の最新開講期だけを検索します。</p>
+      </section>
+      <section class="filters" aria-label="検索条件">
+        <label>
+          キーワード
+          <input id="query" type="search" placeholder="授業名、説明、タグ">
+        </label>
+        <label>
+          科目
+          <select id="course-filter"></select>
+        </label>
+        <label>
+          開講期
+          <select id="term-filter"></select>
+        </label>
+        <label>
+          授業回
+          <input id="lesson-filter" type="text" placeholder="01">
+        </label>
+      </section>
+      <section>
+        <div class="section-title">
+          <h2>タグ</h2>
+          <button id="clear-tags" class="button secondary" type="button">クリア</button>
+        </div>
+        <div id="view-list" class="segmented compact" aria-label="ビュー"></div>
+        <div id="tag-list" class="tag-picker" aria-label="タグ"></div>
+      </section>
+      <section>
+        <div class="section-title">
+          <h2>検索結果</h2>
+          <span id="result-count" class="muted"></span>
+        </div>
+        <div id="search-results" class="lesson-list" aria-live="polite"></div>
+      </section>
+    </main>
+    <script src="./assets/app.js" defer></script>
+  </body>
+</html>
+
