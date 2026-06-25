@@ -90,9 +90,9 @@ a {
 
 .shell {
   flex: 1;
-  width: min(1120px, calc(100% - 32px));
+  width: min(1600px, calc(100% - 24px));
   margin: 0 auto;
-  padding: 36px 0 64px;
+  padding: 40px 0 72px;
 }
 
 .page-heading {
@@ -106,7 +106,7 @@ a {
 }
 
 .page-heading p {
-  max-width: 720px;
+  max-width: 980px;
   margin: 0;
   color: var(--muted);
 }
@@ -140,7 +140,6 @@ a {
 
 .card,
 .lesson-item,
-.file-item,
 .notice {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -257,29 +256,45 @@ a {
 .lesson-list,
 .file-list {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .lesson-item,
 .file-item {
   display: grid;
-  gap: 12px;
-  padding: 18px;
 }
 
-.lesson-item-header,
-.file-item {
-  grid-template-columns: 1fr auto;
-  align-items: start;
+.lesson-item {
+  gap: 12px;
+  padding: 18px;
 }
 
 .lesson-item-header {
   display: grid;
   gap: 16px;
+  grid-template-columns: 1fr auto;
+  align-items: start;
 }
 
 .file-item {
   display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+}
+
+.file-metadata {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pdf-frame {
+  width: 100%;
+  min-height: min(86vh, 980px);
+  border: 0;
+  border-radius: 0;
+  background: #fff;
 }
 
 .filters {
@@ -329,7 +344,7 @@ a {
 }
 
 .footer-inner {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1600px, calc(100% - 24px));
   min-height: 104px;
   margin: 0 auto;
   padding: 24px 0;
@@ -391,5 +406,9 @@ a {
 
   .footer-nav {
     justify-content: flex-start;
+  }
+
+  .pdf-frame {
+    min-height: 60vh;
   }
 }

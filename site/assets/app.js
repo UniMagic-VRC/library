@@ -257,8 +257,7 @@ function lessonCard(lesson, options = {}) {
         ])
       ]),
       el("div", { className: "actions" }, [
-        el("a", { className: "button primary", href }, "授業ページ"),
-        lesson.files[0] ? el("a", { className: "button secondary", href: lesson.files[0].path }, "資料を開く") : ""
+        el("a", { className: "button primary", href }, "授業ページ")
       ])
     ]),
     tagRow([...course.tags, ...lesson.tags])
@@ -267,11 +266,16 @@ function lessonCard(lesson, options = {}) {
 
 function fileItem(file) {
   return el("article", { className: "file-item" }, [
-    el("div", {}, [
+    el("div", { className: "file-metadata" }, [
       el("strong", {}, file.name),
       el("div", { className: "muted" }, formatBytes(file.size))
     ]),
-    el("a", { className: "button primary", href: file.path }, "開く")
+    el("iframe", {
+      className: "pdf-frame",
+      src: file.path,
+      title: file.name,
+      loading: "lazy"
+    })
   ]);
 }
 
