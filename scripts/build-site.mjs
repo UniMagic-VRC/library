@@ -11,13 +11,12 @@ import { PDFDocument, rgb } from "pdf-lib";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const metaPath = path.join(root, "src", "courses.meta.json");
 const materialsDir = path.join(root, "materials");
-const siteDir = path.join(root, "site");
 const distDir = path.join(root, "dist");
 const pdfCacheDir = process.env.PDF_CACHE_DIR
   ? path.resolve(root, process.env.PDF_CACHE_DIR)
   : path.join(root, ".cache", "pdf-materials");
 const regularFontPath = path.join(root, "node_modules", "@expo-google-fonts", "noto-sans-jp", "400Regular", "NotoSansJP_400Regular.ttf");
-const logoSvgPath = path.join(siteDir, "assets", "unimagic-logo.svg");
+const logoSvgPath = path.join(root, "public", "assets", "unimagic-logo.svg");
 const latestMaterialsUrl = "https://unimagic-vrc.github.io/library/";
 const qpdfExecutable = process.env.QPDF || "qpdf";
 const pdfCacheVersion = "pdf-notice-v1";
@@ -52,9 +51,12 @@ async function main() {
 
   failIfErrors();
 
-  await fs.rm(distDir, { recursive: true, force: true });
+  if (!(await exists(distDir))) {
+    throw new Error("dist がありません。先に vite build を実行してください。");
+  }
+  await fs.rm(path.join(distDir, "data"), { recursive: true, force: true });
+  await fs.rm(path.join(distDir, "materials"), { recursive: true, force: true });
   await fs.mkdir(path.join(distDir, "data"), { recursive: true });
-  await copyDir(siteDir, distDir);
   const processedMaterialFilesByKey = await buildMaterials(materialFilesByKey, lessonMetaByKey);
 
   const latestKeys = latestLessonKeys(meta.lessons, terms);
@@ -440,19 +442,6 @@ async function runCommand(command, args, context) {
     const stderr = error.stderr ? `\n${error.stderr}` : "";
     const stdout = error.stdout ? `\n${error.stdout}` : "";
     throw new Error(`${context}${stderr}${stdout}`);
-  }
-}
-
-async function copyDir(from, to) {
-  await fs.mkdir(to, { recursive: true });
-  for (const entry of await visibleEntries(from)) {
-    const source = path.join(from, entry);
-    const target = path.join(to, entry);
-    if (await isDirectory(source)) {
-      await copyDir(source, target);
-    } else {
-      await fs.copyFile(source, target);
-    }
   }
 }
 
