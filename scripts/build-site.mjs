@@ -1,5 +1,6 @@
 import { promises as fs } from "node:fs";
 import { execFile } from "node:child_process";
+import { createHash } from "node:crypto";
 import os from "node:os";
 import path from "node:path";
 import { promisify } from "node:util";
@@ -12,13 +13,18 @@ const metaPath = path.join(root, "src", "courses.meta.json");
 const materialsDir = path.join(root, "materials");
 const siteDir = path.join(root, "site");
 const distDir = path.join(root, "dist");
+const pdfCacheDir = process.env.PDF_CACHE_DIR
+  ? path.resolve(root, process.env.PDF_CACHE_DIR)
+  : path.join(root, ".cache", "pdf-materials");
 const regularFontPath = path.join(root, "node_modules", "@expo-google-fonts", "noto-sans-jp", "400Regular", "NotoSansJP_400Regular.ttf");
 const logoSvgPath = path.join(siteDir, "assets", "unimagic-logo.svg");
 const latestMaterialsUrl = "https://unimagic-vrc.github.io/library/";
 const qpdfExecutable = process.env.QPDF || "qpdf";
+const pdfCacheVersion = "pdf-notice-v1";
 const execFileAsync = promisify(execFile);
 const noticeText = "この資料は作成・更新時点の情報に基づいています。ツールやサービスの仕様変更により、内容が古くなっている可能性があります。";
 let logoSvgCache;
+let pdfCacheInputsCache;
 
 const errors = [];
 
@@ -177,6 +183,7 @@ async function materialFile(absolutePath, termId, courseId, lessonNo) {
 async function buildMaterials(materialFilesByKey, lessonMetaByKey) {
   const processedByKey = new Map();
   const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "unimagic-pdf-notices-"));
+  const cacheStats = { hits: 0, misses: 0 };
 
   try {
     for (const [key, files] of materialFilesByKey.entries()) {
@@ -192,9 +199,11 @@ async function buildMaterials(materialFilesByKey, lessonMetaByKey) {
           sourcePath: file.absolutePath,
           targetPath,
           noticePath: path.join(tempDir, `${termId}-${courseId}-${lesson.lessonNo}.pdf`),
+          tempPath: path.join(tempDir, `${termId}-${courseId}-${lesson.lessonNo}-processed.pdf`),
           title: lesson.title,
           lastUpdated: lesson.date,
-          contextPath: path.relative(root, file.absolutePath)
+          contextPath: path.relative(root, file.absolutePath),
+          cacheStats
         });
         const stat = await fs.stat(targetPath);
         processedFiles.push({
@@ -209,17 +218,67 @@ async function buildMaterials(materialFilesByKey, lessonMetaByKey) {
     await fs.rm(tempDir, { recursive: true, force: true });
   }
 
+  console.log(`PDF cache: ${cacheStats.hits} hit(s), ${cacheStats.misses} miss(es)`);
   return processedByKey;
 }
 
-async function addNoticePages({ sourcePath, targetPath, noticePath, title, lastUpdated, contextPath }) {
+async function addNoticePages({ sourcePath, targetPath, noticePath, tempPath, title, lastUpdated, contextPath, cacheStats }) {
+  const cachePath = await pdfCachePath({ sourcePath, title, lastUpdated });
+  if (await exists(cachePath)) {
+    await fs.copyFile(cachePath, targetPath);
+    cacheStats.hits += 1;
+    return;
+  }
+
   await createNoticePdf({ sourcePath, noticePath, title, lastUpdated, contextPath });
 
   await runCommand(
     qpdfExecutable,
-    ["--warning-exit-0", "--empty", "--pages", noticePath, sourcePath, noticePath, "--", targetPath],
+    ["--warning-exit-0", "--empty", "--pages", noticePath, sourcePath, noticePath, "--", tempPath],
     `PDF注意ページの挿入に失敗しました: ${contextPath}`
   );
+
+  await fs.mkdir(path.dirname(cachePath), { recursive: true });
+  await fs.copyFile(tempPath, targetPath);
+  await writeCacheFile(tempPath, cachePath);
+  cacheStats.misses += 1;
+}
+
+async function pdfCachePath({ sourcePath, title, lastUpdated }) {
+  const [sourceBytes, { fontBytes, logoSvg }] = await Promise.all([fs.readFile(sourcePath), readPdfCacheInputs()]);
+  const key = createHash("sha256")
+    .update(pdfCacheVersion)
+    .update("\0")
+    .update(sourceBytes)
+    .update("\0")
+    .update(fontBytes)
+    .update("\0")
+    .update(logoSvg)
+    .update("\0")
+    .update(JSON.stringify({
+      title,
+      lastUpdated,
+      noticeText,
+      latestMaterialsUrl
+    }))
+    .digest("hex");
+  return path.join(pdfCacheDir, `${key}.pdf`);
+}
+
+async function readPdfCacheInputs() {
+  if (!pdfCacheInputsCache) {
+    pdfCacheInputsCache = Promise.all([
+      fs.readFile(regularFontPath),
+      fs.readFile(logoSvgPath, "utf8")
+    ]).then(([fontBytes, logoSvg]) => ({ fontBytes, logoSvg }));
+  }
+  return pdfCacheInputsCache;
+}
+
+async function writeCacheFile(sourcePath, cachePath) {
+  const tempCachePath = `${cachePath}.${process.pid}.${Date.now()}.tmp`;
+  await fs.copyFile(sourcePath, tempCachePath);
+  await fs.rename(tempCachePath, cachePath);
 }
 
 async function createNoticePdf({ sourcePath, noticePath, title, lastUpdated, contextPath }) {

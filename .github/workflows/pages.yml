@@ -37,6 +37,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Cache processed PDFs
+        uses: actions/cache@v4
+        with:
+          path: .cache/pdf-materials
+          key: pdf-materials-${{ runner.os }}-${{ hashFiles('materials/**/*.pdf', 'src/courses.meta.json', 'scripts/build-site.mjs', 'site/assets/unimagic-logo.svg', 'pnpm-lock.yaml') }}
+          restore-keys: |
+            pdf-materials-${{ runner.os }}-
+
       - name: Build site
         run: pnpm run build
 
