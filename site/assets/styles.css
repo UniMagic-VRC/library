@@ -190,6 +190,12 @@ a {
   font-weight: 650;
 }
 
+.pill.warning {
+  border: 1px solid #fdba74;
+  background: #fff7ed;
+  color: var(--warning);
+}
+
 .tag {
   background: var(--accent-soft);
   color: var(--accent-strong);
