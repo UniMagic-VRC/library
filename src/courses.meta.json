@@ -607,21 +607,6 @@
     },
     {
       "termId": "term-04",
-      "courseId": "blender-basic",
-      "lessonNo": "06",
-      "title": "Blender本科修了制作",
-      "description": "Blender本科修了制作 の授業資料です。",
-      "date": "2024-09-20",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling",
-        "production"
-      ]
-    },
-    {
-      "termId": "term-04",
       "courseId": "unity-basic",
       "lessonNo": "00",
       "title": "Welcome to UniMagic!",
@@ -950,21 +935,6 @@
         "basic",
         "clothing",
         "skinning",
-        "unity",
-        "vrchat"
-      ]
-    },
-    {
-      "termId": "term-05",
-      "courseId": "unity-basic",
-      "lessonNo": "05",
-      "title": "Unity本科修了制作",
-      "description": "Unity本科修了制作 の授業資料です。",
-      "date": "2024-12-06",
-      "tags": [
-        "avatar",
-        "basic",
-        "production",
         "unity",
         "vrchat"
       ]
