@@ -109,7 +109,7 @@
       "courseId": "unity-basic",
       "lessonNo": "01",
       "title": "Welcome to UniMagic!",
-      "description": "Welcome to UniMagic! の授業資料です。",
+      "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2023-06-26",
       "tags": [
         "avatar",
@@ -124,7 +124,7 @@
       "courseId": "unity-basic",
       "lessonNo": "02",
       "title": "素材が変われば色も変わる",
-      "description": "素材が変われば色も変わる の授業資料です。",
+      "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2023-06-27",
       "tags": [
         "avatar",
@@ -140,7 +140,7 @@
       "courseId": "unity-basic",
       "lessonNo": "03",
       "title": "アイテムは装備しないと使えない",
-      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2023-06-28",
       "tags": [
         "accessory",
@@ -156,7 +156,7 @@
       "courseId": "unity-basic",
       "lessonNo": "04",
       "title": "身に纏うは無窮の風",
-      "description": "身に纏うは無窮の風 の授業資料です。",
+      "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2023-06-29",
       "tags": [
         "avatar",
@@ -172,7 +172,7 @@
       "courseId": "unity-basic",
       "lessonNo": "01",
       "title": "Welcome to UniMagic!",
-      "description": "Welcome to UniMagic! の授業資料です。",
+      "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2023-09-25",
       "tags": [
         "avatar",
@@ -187,7 +187,7 @@
       "courseId": "unity-basic",
       "lessonNo": "02",
       "title": "素材が変われば色も変わる",
-      "description": "素材が変われば色も変わる の授業資料です。",
+      "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2023-09-26",
       "tags": [
         "avatar",
@@ -203,7 +203,7 @@
       "courseId": "unity-basic",
       "lessonNo": "03",
       "title": "アイテムは装備しないと使えない",
-      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2023-09-27",
       "tags": [
         "accessory",
@@ -219,7 +219,7 @@
       "courseId": "unity-basic",
       "lessonNo": "04",
       "title": "身に纏うは無窮の風",
-      "description": "身に纏うは無窮の風 の授業資料です。",
+      "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2023-09-28",
       "tags": [
         "avatar",
@@ -235,7 +235,7 @@
       "courseId": "world-specialized",
       "lessonNo": "00",
       "title": "What is UniMagic for Your Next World",
-      "description": "What is UniMagic for Your Next World の授業資料です。",
+      "description": "ワールド専科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
       "date": "2024-02-12",
       "tags": [
         "advanced",
@@ -249,7 +249,7 @@
       "courseId": "world-specialized",
       "lessonNo": "01",
       "title": "きみ、流れるようにあんぱっくしたね？",
-      "description": "きみ、流れるようにあんぽっくしたね？ の授業資料です。",
+      "description": "Prefabの構造、Unpackの考え方、GameObject・Component・Hierarchy上での編集手順を扱います。",
       "date": "2024-02-13",
       "tags": [
         "advanced",
@@ -264,7 +264,7 @@
       "courseId": "world-specialized",
       "lessonNo": "02",
       "title": "君たちはどうきいるか",
-      "description": "君たちはどうきいるか の授業資料です。",
+      "description": "VRChatワールドにおける同期の考え方、同期される処理とされない処理、複数プレイヤー間での挙動確認を扱います。",
       "date": "2024-02-14",
       "tags": [
         "advanced",
@@ -279,7 +279,7 @@
       "courseId": "world-specialized",
       "lessonNo": "03",
       "title": "エラーと向き合う",
-      "description": "エラーと向き合う の授業資料です。",
+      "description": "UnityやVRCSDKのエラー確認、Consoleの読み方、ビルド・アップロード時の原因切り分けと対処を扱います。",
       "date": "2024-02-15",
       "tags": [
         "advanced",
@@ -294,7 +294,7 @@
       "courseId": "world-specialized",
       "lessonNo": "04",
       "title": "その想い、重すぎて。",
-      "description": "その想い、重すぎて。 の授業資料です。",
+      "description": "ワールドの容量や描画負荷を見直し、不要要素の整理や軽量化で快適に遊べる状態へ近づける方法を扱います。",
       "date": "2024-02-16",
       "tags": [
         "advanced",
@@ -309,7 +309,7 @@
       "courseId": "world-specialized",
       "lessonNo": "00",
       "title": "What is UniMagic for Your Next World",
-      "description": "What is UniMagic for Your Next World の授業資料です。",
+      "description": "ワールド専科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
       "date": "2024-03-11",
       "tags": [
         "advanced",
@@ -323,7 +323,7 @@
       "courseId": "world-specialized",
       "lessonNo": "01",
       "title": "きみ、流れるようにあんぱっくしたね？",
-      "description": "きみ、流れるようにあんぱっくしたね？ の授業資料です。",
+      "description": "Prefabの構造、Unpackの考え方、GameObject・Component・Hierarchy上での編集手順を扱います。",
       "date": "2024-03-12",
       "tags": [
         "advanced",
@@ -338,7 +338,7 @@
       "courseId": "world-specialized",
       "lessonNo": "02",
       "title": "君たちはどうきいるか",
-      "description": "君たちはどうきいるか の授業資料です。",
+      "description": "VRChatワールドにおける同期の考え方、同期される処理とされない処理、複数プレイヤー間での挙動確認を扱います。",
       "date": "2024-03-13",
       "tags": [
         "advanced",
@@ -353,7 +353,7 @@
       "courseId": "world-specialized",
       "lessonNo": "03",
       "title": "エラーと向き合う",
-      "description": "エラーと向き合う の授業資料です。",
+      "description": "UnityやVRCSDKのエラー確認、Consoleの読み方、ビルド・アップロード時の原因切り分けと対処を扱います。",
       "date": "2024-03-14",
       "tags": [
         "advanced",
@@ -368,7 +368,7 @@
       "courseId": "world-specialized",
       "lessonNo": "04",
       "title": "その想い、重すぎて。",
-      "description": "その想い、重すぎて。 の授業資料です。",
+      "description": "ワールドの容量や描画負荷を見直し、不要要素の整理や軽量化で快適に遊べる状態へ近づける方法を扱います。",
       "date": "2024-03-15",
       "tags": [
         "advanced",
@@ -383,7 +383,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "01",
       "title": "Let's make it 0 to 1",
-      "description": "Let s make it 0 to 1 の授業資料です。",
+      "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2024-06-10",
       "tags": [
         "avatar",
@@ -397,7 +397,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "02",
       "title": "お前はもう、動いている",
-      "description": "お前はもう、動いている の授業資料です。",
+      "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2024-06-11",
       "tags": [
         "animation",
@@ -412,7 +412,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "03",
       "title": "アバターギミック、アッセンブル!",
-      "description": "アバターギミック、アッセンブル! の授業資料です。",
+      "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2024-06-12",
       "tags": [
         "animation",
@@ -428,7 +428,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "04",
       "title": "俺はパーを出したぞ！(宣言)",
-      "description": "俺はパーを出したぞ(宣言) の授業資料です。",
+      "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2024-06-13",
       "tags": [
         "avatar",
@@ -443,7 +443,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "05",
       "title": "プログラミング的思考のススメ",
-      "description": "プログラミング的思考のススメ の授業資料です。",
+      "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2024-06-14",
       "tags": [
         "avatar",
@@ -458,7 +458,7 @@
       "courseId": "unity-basic",
       "lessonNo": "00",
       "title": "Welcome to UniMagic!",
-      "description": "Welcome to UniMagic! の授業資料です。",
+      "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2024-06-10",
       "tags": [
         "avatar",
@@ -473,7 +473,7 @@
       "courseId": "unity-basic",
       "lessonNo": "01",
       "title": "“魔法”のことはじめ",
-      "description": "“魔法”のことはじめ の授業資料です。",
+      "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2024-06-11",
       "tags": [
         "avatar",
@@ -487,7 +487,7 @@
       "courseId": "unity-basic",
       "lessonNo": "02",
       "title": "素材が変われば色も変わる",
-      "description": "素材が変われば色も変わる の授業資料です。",
+      "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2024-06-12",
       "tags": [
         "avatar",
@@ -503,7 +503,7 @@
       "courseId": "unity-basic",
       "lessonNo": "03",
       "title": "アイテムは装備しないと使えない",
-      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2024-06-13",
       "tags": [
         "accessory",
@@ -519,7 +519,7 @@
       "courseId": "unity-basic",
       "lessonNo": "04",
       "title": "身に纏うは無窮の風",
-      "description": "身に纏うは無窮の風 の授業資料です。",
+      "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2024-06-14",
       "tags": [
         "avatar",
@@ -535,7 +535,7 @@
       "courseId": "blender-basic",
       "lessonNo": "01",
       "title": "はじめの一歩、もう一度！",
-      "description": "はじめの一歩、もう一度！ の授業資料です。",
+      "description": "Blenderの基本操作を復習し、オブジェクト操作・視点操作・編集モードを使った最初のモデリングを扱います。",
       "date": "2024-09-09",
       "tags": [
         "3d",
@@ -549,7 +549,7 @@
       "courseId": "blender-basic",
       "lessonNo": "02",
       "title": "点、線、面、立体",
-      "description": "点、線、面、立体 の授業資料です。",
+      "description": "頂点・辺・面から立体を作る考え方、メッシュ編集、押し出しや形状調整によるモデリング基礎を扱います。",
       "date": "2024-09-11",
       "tags": [
         "3d",
@@ -563,7 +563,7 @@
       "courseId": "blender-basic",
       "lessonNo": "03",
       "title": "Bling-Bang-Bang-\"Bone\"",
-      "description": "Bling-Bang-Bang- Bone の授業資料です。",
+      "description": "ArmatureやBoneの基本を使い、モデルを動かすための骨構造とリギングの入口を扱います。",
       "date": "2024-09-06",
       "tags": [
         "3d",
@@ -579,7 +579,7 @@
       "courseId": "blender-basic",
       "lessonNo": "04",
       "title": "UVなのに、目に見える！",
-      "description": "UVなのに、目に見える！ の授業資料です。",
+      "description": "UV展開の考え方、テクスチャとモデル表面の対応付け、見た目を編集するための下準備を扱います。",
       "date": "2024-09-18",
       "tags": [
         "3d",
@@ -594,7 +594,7 @@
       "courseId": "blender-basic",
       "lessonNo": "05",
       "title": "Create, Share, Play.",
-      "description": "Create, Share, Play. の授業資料です。",
+      "description": "制作物の仕上げ、モデリング手順の見直し、共有やUnity連携を見据えた書き出し準備を扱います。",
       "date": "2024-09-20",
       "tags": [
         "3d",
@@ -610,7 +610,7 @@
       "courseId": "unity-basic",
       "lessonNo": "00",
       "title": "Welcome to UniMagic!",
-      "description": "Welcome to UniMagic! の授業資料です。",
+      "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2024-09-09",
       "tags": [
         "avatar",
@@ -625,7 +625,7 @@
       "courseId": "unity-basic",
       "lessonNo": "01",
       "title": "魔法 のことはじめ",
-      "description": "魔法 のことはじめ の授業資料です。",
+      "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2024-09-10",
       "tags": [
         "avatar",
@@ -639,7 +639,7 @@
       "courseId": "unity-basic",
       "lessonNo": "02",
       "title": "素材が変われば色も変わる",
-      "description": "素材が変われば色も変わる の授業資料です。",
+      "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2024-09-11",
       "tags": [
         "avatar",
@@ -655,7 +655,7 @@
       "courseId": "unity-basic",
       "lessonNo": "03",
       "title": "アイテムは装備しないと使えない",
-      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2024-09-12",
       "tags": [
         "accessory",
@@ -671,7 +671,7 @@
       "courseId": "unity-basic",
       "lessonNo": "04",
       "title": "身に纏うは無窮の風",
-      "description": "身に纏うは無窮の風 の授業資料です。",
+      "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2024-09-13",
       "tags": [
         "avatar",
@@ -687,7 +687,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "01",
       "title": "Let's make it 0 to 1",
-      "description": "アバターギミック本科_基盤授業1限目 の授業資料です。",
+      "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2024-12-02",
       "tags": [
         "avatar",
@@ -701,7 +701,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "02",
       "title": "お前はもう、動いている",
-      "description": "アバターギミック本科_基盤授業2限目 の授業資料です。",
+      "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2024-12-03",
       "tags": [
         "animation",
@@ -716,7 +716,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "03",
       "title": "アバターギミック、アッセンブル!",
-      "description": "アバターギミック本科_基盤授業3限目 の授業資料です。",
+      "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2024-12-04",
       "tags": [
         "animation",
@@ -732,7 +732,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "04",
       "title": "俺はパーを出したぞ！(宣言)",
-      "description": "アバターギミック本科_基盤授業4限目 の授業資料です。",
+      "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2024-12-05",
       "tags": [
         "avatar",
@@ -747,7 +747,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "05",
       "title": "プログラミング的思考のススメ",
-      "description": "アバターギミック本科_基盤授業5限目 の授業資料です。",
+      "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2024-12-06",
       "tags": [
         "avatar",
@@ -762,7 +762,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "06",
       "title": "How to Debug?",
-      "description": "アバターギミック本科_基盤授業6限目 の授業資料です。",
+      "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
       "date": "2024-12-09",
       "tags": [
         "avatar",
@@ -777,7 +777,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "07",
       "title": "今どき流行りのModular Avatar",
-      "description": "アバターギミック本科_基盤授業7限目 の授業資料です。",
+      "description": "Modular Avatarを使った非破壊のメニュー追加、Animator統合、Object Toggleなどのギミック構成を扱います。",
       "date": "2024-12-10",
       "tags": [
         "avatar",
@@ -792,7 +792,7 @@
       "courseId": "blender-basic",
       "lessonNo": "01",
       "title": "はじめの一歩、もう一度！",
-      "description": "はじめの一歩、もう一度！ の授業資料です。",
+      "description": "Blenderの基本操作を復習し、オブジェクト操作・視点操作・編集モードを使った最初のモデリングを扱います。",
       "date": "2024-12-02",
       "tags": [
         "3d",
@@ -806,7 +806,7 @@
       "courseId": "blender-basic",
       "lessonNo": "02",
       "title": "点、線、面、立体",
-      "description": "点、線、面、立体 の授業資料です。",
+      "description": "頂点・辺・面から立体を作る考え方、メッシュ編集、押し出しや形状調整によるモデリング基礎を扱います。",
       "date": "2024-12-04",
       "tags": [
         "3d",
@@ -820,7 +820,7 @@
       "courseId": "blender-basic",
       "lessonNo": "03",
       "title": "Bling-Bang-Bang-\"Bone\"",
-      "description": "Bling-Bang-Bang- Bone の授業資料です。",
+      "description": "ArmatureやBoneの基本を使い、モデルを動かすための骨構造とリギングの入口を扱います。",
       "date": "2024-12-09",
       "tags": [
         "3d",
@@ -836,7 +836,7 @@
       "courseId": "blender-basic",
       "lessonNo": "04",
       "title": "UVなのに、目に見える！",
-      "description": "UVなのに、目に見える！ の授業資料です。",
+      "description": "UV展開の考え方、テクスチャとモデル表面の対応付け、見た目を編集するための下準備を扱います。",
       "date": "2024-12-11",
       "tags": [
         "3d",
@@ -851,7 +851,7 @@
       "courseId": "blender-basic",
       "lessonNo": "05",
       "title": "Create, Share, Play",
-      "description": "Create, Share, Play の授業資料です。",
+      "description": "制作物の仕上げ、モデリング手順の見直し、共有やUnity連携を見据えた書き出し準備を扱います。",
       "date": "2024-12-13",
       "tags": [
         "3d",
@@ -867,7 +867,7 @@
       "courseId": "unity-basic",
       "lessonNo": "00",
       "title": "Welcome to UniMagic!",
-      "description": "Welcome to UniMagic! の授業資料です。",
+      "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2024-12-02",
       "tags": [
         "avatar",
@@ -882,7 +882,7 @@
       "courseId": "unity-basic",
       "lessonNo": "01",
       "title": "魔法のことはじめ",
-      "description": "魔法のことはじめ の授業資料です。",
+      "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2024-12-03",
       "tags": [
         "avatar",
@@ -896,7 +896,7 @@
       "courseId": "unity-basic",
       "lessonNo": "02",
       "title": "素材が変われば色も変わる",
-      "description": "素材が変われば色も変わる の授業資料です。",
+      "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2024-12-04",
       "tags": [
         "avatar",
@@ -912,7 +912,7 @@
       "courseId": "unity-basic",
       "lessonNo": "03",
       "title": "アイテムは装備しないと使えない",
-      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2024-12-05",
       "tags": [
         "accessory",
@@ -928,7 +928,7 @@
       "courseId": "unity-basic",
       "lessonNo": "04",
       "title": "身に纏うは無窮の風",
-      "description": "身に纏うは無窮の風 の授業資料です。",
+      "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2024-12-06",
       "tags": [
         "avatar",
@@ -944,7 +944,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "01",
       "title": "Let's make it 0 to 1",
-      "description": "アバターギミック本科_基盤授業1限目 の授業資料です。",
+      "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2025-09-29",
       "tags": [
         "avatar",
@@ -958,7 +958,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "02",
       "title": "お前はもう、動いている",
-      "description": "アバターギミック本科_基盤授業2限目 の授業資料です。",
+      "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2025-09-30",
       "tags": [
         "animation",
@@ -973,7 +973,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "03",
       "title": "アバターギミック、アッセンブル!",
-      "description": "アバターギミック本科_基盤授業3限目 の授業資料です。",
+      "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2025-10-01",
       "tags": [
         "animation",
@@ -989,7 +989,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "04",
       "title": "俺はパーを出したぞ！(宣言)",
-      "description": "アバターギミック本科_基盤授業4限目 の授業資料です。",
+      "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2025-10-02",
       "tags": [
         "avatar",
@@ -1004,7 +1004,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "05",
       "title": "プログラミング的思考のススメ",
-      "description": "アバターギミック本科_基盤授業5限目 の授業資料です。",
+      "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2025-10-03",
       "tags": [
         "avatar",
@@ -1019,7 +1019,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "06",
       "title": "How to Debug?",
-      "description": "アバターギミック本科_基盤授業6限目 の授業資料です。",
+      "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
       "date": "2025-10-06",
       "tags": [
         "avatar",
@@ -1034,7 +1034,7 @@
       "courseId": "avatar-gimmick-basic",
       "lessonNo": "07",
       "title": "今どき流行りのModular Avatar",
-      "description": "アバターギミック本科_基盤授業7限目 の授業資料です。",
+      "description": "Modular Avatarを使った非破壊のメニュー追加、Animator統合、Object Toggleなどのギミック構成を扱います。",
       "date": "2025-10-07",
       "tags": [
         "avatar",
@@ -1049,7 +1049,7 @@
       "courseId": "particle-live",
       "lessonNo": "01",
       "title": "パーティクルライブの一歩目を",
-      "description": "パーティクルライブの一歩目を の授業資料です。",
+      "description": "パーティクルライブ制作の全体像、Unity・Timeline・Particle Systemの準備、最初の発火演出を扱います。",
       "date": "2025-09-29",
       "tags": [
         "live",
@@ -1064,7 +1064,7 @@
       "courseId": "particle-live",
       "lessonNo": "02",
       "title": "パーティクルライブの目録を",
-      "description": "パーティクルライブの目録を の授業資料です。",
+      "description": "Particle Systemの主要モジュールを整理し、Emission・Shape・Velocity・Color・Sizeなどの調整項目を扱います。",
       "date": "2025-09-30",
       "tags": [
         "live",
@@ -1079,7 +1079,7 @@
       "courseId": "particle-live",
       "lessonNo": "03",
       "title": "パーティクルライブの散在を",
-      "description": "パーティクルライブの散在を の授業資料です。",
+      "description": "複数のParticle Systemを空間に配置し、Timeline上で発火タイミングや広がりを組み立てる方法を扱います。",
       "date": "2025-10-01",
       "tags": [
         "live",
@@ -1094,7 +1094,7 @@
       "courseId": "particle-live",
       "lessonNo": "04",
       "title": "パーティクルライブの現像を",
-      "description": "パーティクルライブの現像を の授業資料です。",
+      "description": "Shader・Material・Renderer設定を使い、発光・透明感・色味などパーティクルの見た目を仕上げる方法を扱います。",
       "date": "2025-10-02",
       "tags": [
         "live",
@@ -1110,7 +1110,7 @@
       "courseId": "particle-live",
       "lessonNo": "05",
       "title": "魅力的な「動き」を作ろう",
-      "description": "魅力的な「動き」を作ろう (2) の授業資料です。",
+      "description": "TimelineやAnimationで演出に緩急を付け、視線誘導やリズムに合わせた魅力的な動きを作る方法を扱います。",
       "date": "2025-10-03",
       "tags": [
         "live",
@@ -1125,7 +1125,7 @@
       "courseId": "unity-basic",
       "lessonNo": "00",
       "title": "Welcome to UniMagic!",
-      "description": "Welcome to UniMagic! の授業資料です。",
+      "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2025-09-29",
       "tags": [
         "avatar",
@@ -1140,7 +1140,7 @@
       "courseId": "unity-basic",
       "lessonNo": "01",
       "title": "魔法のことはじめ",
-      "description": "魔法のことはじめ の授業資料です。",
+      "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2025-09-30",
       "tags": [
         "avatar",
@@ -1154,7 +1154,7 @@
       "courseId": "unity-basic",
       "lessonNo": "02",
       "title": "素材が変われば色も変わる",
-      "description": "素材が変われば色も変わる の授業資料です。",
+      "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2025-10-01",
       "tags": [
         "avatar",
@@ -1170,7 +1170,7 @@
       "courseId": "unity-basic",
       "lessonNo": "03",
       "title": "アイテムは装備しないと使えない",
-      "description": "アイテムは装備しないと使えない の授業資料です。",
+      "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2025-10-02",
       "tags": [
         "accessory",
@@ -1186,7 +1186,7 @@
       "courseId": "unity-basic",
       "lessonNo": "04",
       "title": "身に纏うは無窮の風",
-      "description": "身に纏うは無窮の風 の授業資料です。",
+      "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2025-10-03",
       "tags": [
         "avatar",
@@ -1202,7 +1202,7 @@
       "courseId": "blender-basic",
       "lessonNo": "01",
       "title": "UniMagicへようこそ",
-      "description": "UniMagicへようこそ の授業資料です。",
+      "description": "Blender本科の受講準備、Blenderの画面構成、基本操作、3Dモデル制作の学習全体像を扱います。",
       "date": "2026-03-02",
       "tags": [
         "3d",
@@ -1217,7 +1217,7 @@
       "courseId": "blender-basic",
       "lessonNo": "02",
       "title": "点・線・面・立体",
-      "description": "点・線・面・立体 の授業資料です。",
+      "description": "頂点・辺・面から立体を作る考え方、メッシュ編集、押し出しや形状調整によるモデリング基礎を扱います。",
       "date": "2026-03-03",
       "tags": [
         "3d",
@@ -1231,7 +1231,7 @@
       "courseId": "blender-basic",
       "lessonNo": "05",
       "title": "Blenderの極意",
-      "description": "Blenderの極意 の授業資料です。",
+      "description": "制作物の仕上げ、モデリング手順の見直し、共有やUnity連携を見据えた書き出し準備を扱います。",
       "date": "2026-03-06",
       "tags": [
         "3d",
@@ -1247,7 +1247,7 @@
       "courseId": "blender-basic",
       "lessonNo": "06",
       "title": "骨を作ってみよう",
-      "description": "骨を作ってみよう の授業資料です。",
+      "description": "Blenderでボーンを作成し、Armatureを配置してモデルを動かすための骨組みを整える方法を扱います。",
       "date": "2026-03-09",
       "tags": [
         "3d",
@@ -1263,7 +1263,7 @@
       "courseId": "blender-basic",
       "lessonNo": "08",
       "title": "変形するモデル",
-      "description": "変形するモデル の授業資料です。",
+      "description": "モデルを自然に変形させるためのスキニング、ウェイト設定、ボーンとメッシュの関連付けを扱います。",
       "date": "2026-03-11",
       "tags": [
         "3d",
@@ -1278,7 +1278,7 @@
       "courseId": "blender-basic",
       "lessonNo": "10",
       "title": "Go to Unity",
-      "description": "Go to Unity の授業資料です。",
+      "description": "BlenderからFBXを書き出し、Unityへ取り込んでスケール・Material・見た目を確認する流れを扱います。",
       "date": "2026-03-13",
       "tags": [
         "3d",
@@ -1294,7 +1294,7 @@
       "courseId": "blender-basic",
       "lessonNo": "11",
       "title": "見た目を整えよう",
-      "description": "見た目を整えよう の授業資料です。",
+      "description": "Material・Texture・UVを調整し、モデルの色や質感を整えてUnityで見栄えよく表示する方法を扱います。",
       "date": "2026-03-16",
       "tags": [
         "3d",
@@ -1311,7 +1311,7 @@
       "courseId": "blender-basic",
       "lessonNo": "13",
       "title": "Create Share Play",
-      "description": "Create Share Play の授業資料です。",
+      "description": "Blenderで作ったモデルを仕上げ、Unity連携や共有・発表までつなげる制作フローを扱います。",
       "date": "2026-03-18",
       "tags": [
         "3d",
