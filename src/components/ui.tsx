@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { lessonAgeWarningLabel } from "../catalog";
+import { lessonAgeWarningLabel, lessonAgeWarningTone } from "../catalog";
 
 export function TagRow({ tags = [] }: { tags?: string[] }) {
   return (
@@ -22,9 +22,20 @@ export function Pill({ children, className }: { children: ReactNode; className?:
 
 export function LessonAgeWarningPill({ lastUpdated }: { lastUpdated: string | undefined }) {
   const label = lessonAgeWarningLabel(lastUpdated);
-  if (!label) return null;
+  const tone = lessonAgeWarningTone(lastUpdated);
+  if (!label || !tone) return null;
+
+  const toneClass =
+    tone === "error"
+      ? "border-red-300 bg-red-50 text-red-700"
+      : tone === "warning"
+        ? "border-orange-300 bg-orange-50 text-warning"
+        : "border-line bg-white text-muted";
+
   return (
-    <span className="inline-flex min-h-7 items-center rounded-full border border-orange-300 bg-orange-50 px-2.5 py-1 text-[13px] font-[650] text-warning">
+    <span
+      className={`inline-flex min-h-7 items-center rounded-full border px-2.5 py-1 text-[13px] font-[650] ${toneClass}`}
+    >
       最終更新から{label}経過しているため、情報が古い可能性があります。
     </span>
   );

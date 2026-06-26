@@ -97,6 +97,16 @@ export function lessonAgeWarningLabel(lastUpdated: string | undefined): string {
   return "";
 }
 
+export function lessonAgeWarningTone(
+  lastUpdated: string | undefined,
+): "default" | "warning" | "error" | null {
+  const months = lessonAgeInMonths(lastUpdated);
+  if (months === null || months < 6) return null;
+  if (months >= 24) return "error";
+  if (months >= 12) return "warning";
+  return "default";
+}
+
 function lessonAgeInMonths(lastUpdated: string | undefined): number | null {
   const updated = parseLessonDate(lastUpdated);
   if (!updated) return null;
