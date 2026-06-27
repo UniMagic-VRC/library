@@ -32,26 +32,30 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
     );
   }
 
+  function tagSearchHref(tag: string) {
+    return `./search.html?tag=${encodeURIComponent(tag)}`;
+  }
+
   return (
-    <>
-      <nav className="mb-[18px]">
+    <div className="flex flex-col gap-2">
+      <nav>
         <a className="font-bold text-accent-strong no-underline" href={`./course.html?id=${encodeURIComponent(course.id)}`}>{course.title}</a>
       </nav>
-      <section className="mb-[30px] flex flex-col gap-2">
-        <p className="m-0 max-w-[980px] text-[13px] font-extrabold tracking-normal text-accent-strong uppercase">{term.label} / 第{lesson.lessonNo}回</p>
+      <section className="flex flex-col gap-2">
+        <p className="m-0 text-[13px] font-extrabold tracking-normal text-accent-strong uppercase">{term.label} / 第{lesson.lessonNo}回</p>
         <h1 className="mt-1 mb-2 text-[clamp(30px,5vw,52px)] leading-[1.12]">{lesson.title}</h1>
-        <p className="m-0 max-w-[980px] text-muted">{lesson.description || ""}</p>
+        <p className="m-0 text-muted">{lesson.description || ""}</p>
         <div className="flex flex-wrap items-center gap-2">
           <LessonAgeWarningPill lastUpdated={lesson.lastUpdated} />
-          {lesson.isLatestForCourseTerm ? <Pill>最新版</Pill> : <Pill className="warning">過去開講期</Pill>}
+          {lesson.isLatestForCourseTerm ? <Pill>最新版</Pill> : <Pill tone="warning">過去開講期</Pill>}
           <Pill>最終更新 {formatDate(lesson.lastUpdated)}</Pill>
         </div>
-        <TagRow tags={[...(course.tags || []), ...lesson.tags]} />
+        <TagRow tags={[...(course.tags || []), ...lesson.tags]} hrefForTag={tagSearchHref} />
       </section>
 
       {!lesson.isLatestForCourseTerm && (
-        <a className="flex min-h-[38px] w-fit cursor-pointer flex-row items-center rounded-lg border border-orange-300 bg-orange-50 px-[13px] py-2 font-[inherit] text-warning no-underline" href={`./course.html?id=${encodeURIComponent(course.id)}&term=${encodeURIComponent(lesson.latestCourseTermId || lesson.termId)}`}>
-          <FileSymlink /> より新しい開講期{latestTerm ? `（${latestTerm.label}）` : ""}の資料があります
+        <a className="flex flex-row gap-2 w-fit cursor-pointer items-center rounded-lg border border-orange-300 bg-orange-50 p-2 font-[inherit] text-warning no-underline" href={`./course.html?id=${encodeURIComponent(course.id)}&term=${encodeURIComponent(lesson.latestCourseTermId || lesson.termId)}`}>
+          <FileSymlink /><span>より新しい開講期{latestTerm ? `（${latestTerm.label}）` : ""}の資料があります</span>
         </a>
       )}
       {(previousLesson || nextLesson) && (
@@ -93,6 +97,6 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
           ))}
         </div>
       </section>
-    </>
+    </div>
   );
 }

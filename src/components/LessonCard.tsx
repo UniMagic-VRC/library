@@ -16,15 +16,17 @@ export function LessonCard({ catalog, lesson, showCourse = false }: { catalog: C
           <div>
             <h3 className="m-0 text-[19px] leading-[1.35]">{title}</h3>
             <p className="m-0 text-muted">{lesson.description || ""}</p>
-            <div className="flex flex-wrap items-center gap-2">
-              <LessonAgeWarningPill lastUpdated={lesson.lastUpdated} />
-              {lesson.isLatestForCourseTerm ? <Pill>最新開講期</Pill> : <Pill className="warning">過去開講期</Pill>}
-              <Pill>{term?.label || lesson.termId}</Pill>
-              <Pill>最終更新 {formatDate(lesson.lastUpdated)}</Pill>
-            </div>
           </div>
         </div>
-        <TagRow tags={[...(course?.tags || []), ...lesson.tags]} />
+        <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <LessonAgeWarningPill lastUpdated={lesson.lastUpdated} />
+            {lesson.isLatestForCourseTerm ? <Pill>最新開講期</Pill> : <Pill tone="warning">過去開講期</Pill>}
+            <Pill>{term?.label || lesson.termId}</Pill>
+            <Pill>最終更新 {formatDate(lesson.lastUpdated)}</Pill>
+          </div>
+          <TagRow tags={[...(course?.tags || []), ...lesson.tags]} />
+        </div>
       </article>
     </a>
   );

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   allTags,
   compareLessonVersion,
@@ -18,10 +18,17 @@ export function SearchPage({ catalog }: { catalog: Catalog }) {
   const [courseId, setCourseId] = useState(params.get("course") || "");
   const [termId, setTermId] = useState(params.get("term") || "");
   const [lessonNo, setLessonNo] = useState(params.get("lesson") || "");
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
+  const [selectedTags, setSelectedTags] = useState<Set<string>>(() => new Set(tagsFromParams(params)));
   const tags = useMemo(() => allTags(catalog), [catalog]);
 
   useDocumentTitle("全資料検索 | UniMagic 過去期授業資料ライブラリ");
+
+  useEffect(() => {
+    const nextParams = paramsForSearchState({ query, courseId, termId, lessonNo, selectedTags });
+    const nextQuery = nextParams.toString();
+    const nextUrl = `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ""}${window.location.hash}`;
+    history.replaceState(null, "", nextUrl);
+  }, [query, courseId, termId, lessonNo, selectedTags]);
 
   const results = catalog.lessons
     .filter((lesson) => {
@@ -125,4 +132,34 @@ export function SearchPage({ catalog }: { catalog: Catalog }) {
       </section>
     </>
   );
+}
+
+function tagsFromParams(params: URLSearchParams): string[] {
+  const repeatedTags = params.getAll("tag").flatMap((tag) => tag.split(","));
+  const commaSeparatedTags = (params.get("tags") || "").split(",");
+  return [...repeatedTags, ...commaSeparatedTags]
+    .map((tag) => tag.trim())
+    .filter(Boolean);
+}
+
+function paramsForSearchState({
+  query,
+  courseId,
+  termId,
+  lessonNo,
+  selectedTags,
+}: {
+  query: string;
+  courseId: string;
+  termId: string;
+  lessonNo: string;
+  selectedTags: Set<string>;
+}): URLSearchParams {
+  const params = new URLSearchParams();
+  if (query) params.set("q", query);
+  if (courseId) params.set("course", courseId);
+  if (termId) params.set("term", termId);
+  if (lessonNo) params.set("lesson", lessonNo);
+  for (const tag of selectedTags) params.append("tag", tag);
+  return params;
 }

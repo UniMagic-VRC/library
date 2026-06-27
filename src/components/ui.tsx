@@ -1,23 +1,44 @@
 import type { ReactNode } from "react";
 import { lessonAgeWarningLabel, lessonAgeWarningTone } from "../catalog";
+import { LinkIcon } from "lucide-react";
 
-export function TagRow({ tags = [] }: { tags?: string[] }) {
+export function TagRow({ tags = [], hrefForTag }: { tags?: string[]; hrefForTag?: (tag: string) => string }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
       {[...new Set(tags)].map((tag) => (
-        <span key={tag} className="inline-flex min-h-7 items-center rounded-full bg-accent-soft px-2.5 py-1 text-[13px] font-[650] text-accent-strong">
-          {tag}
-        </span>
+        <Pill key={tag} tone="info" href={hrefForTag?.(tag)} showHrefIcon={false}>{tag}</Pill>
       ))}
     </div>
   );
 }
 
-export function Pill({ children, className }: { children: ReactNode; className?: string }) {
-  const toneClass = className === "warning"
+export function Pill({
+  children,
+  tone = "default",
+  href,
+  showHrefIcon = true,
+}: {
+  children: ReactNode;
+  tone?: "default" | "warning" | "error" | "info";
+  href?: string;
+  showHrefIcon?: boolean;
+}) {
+  const toneClass = tone === "warning"
     ? "border border-orange-300 bg-orange-50 text-warning"
-    : "bg-surface-strong text-muted";
-  return <span className={`inline-flex min-h-7 items-center rounded-full px-2.5 py-1 text-[13px] font-[650] ${toneClass}`}>{children}</span>;
+    : tone === "error"
+      ? "border border-red-300 bg-red-50 text-red-700"
+      : tone === "info"
+        ? "border border-accent-300 bg-accent-soft text-accent-strong"
+        : "border border-line bg-surface-strong text-muted";
+
+  const baseClass = `inline-flex min-h-7 items-center rounded-full px-2.5 py-1 text-[13px] font-[650] ${toneClass}`;
+
+  if (href) return <a href={href} className={baseClass}>
+    <LinkIcon className="mr-1 w-4 h-4" />
+    {children}
+  </a>;
+
+  return <span className={baseClass}>{children}</span>;
 }
 
 export function LessonAgeWarningPill({ lastUpdated }: { lastUpdated: string | undefined }) {
@@ -25,19 +46,10 @@ export function LessonAgeWarningPill({ lastUpdated }: { lastUpdated: string | un
   const tone = lessonAgeWarningTone(lastUpdated);
   if (!label || !tone) return null;
 
-  const toneClass =
-    tone === "error"
-      ? "border-red-300 bg-red-50 text-red-700"
-      : tone === "warning"
-        ? "border-orange-300 bg-orange-50 text-warning"
-        : "border-line bg-white text-muted";
-
   return (
-    <span
-      className={`inline-flex min-h-7 items-center rounded-full border px-2.5 py-1 text-[13px] font-[650] ${toneClass}`}
-    >
+    <Pill tone={tone}>
       最終更新から{label}経過しているため、情報が古い可能性があります。
-    </span>
+    </Pill>
   );
 }
 

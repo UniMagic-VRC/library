@@ -41,6 +41,10 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
     history.replaceState(null, "", `./course.html?id=${encodeURIComponent(currentCourse.id)}&term=${encodeURIComponent(termId)}`);
   }
 
+  function tagSearchHref(tag: string) {
+    return `./search.html?tag=${encodeURIComponent(tag)}`;
+  }
+
   return (
     <>
       <nav className="mb-[18px]"><a className="font-bold text-accent-strong no-underline" href="./index.html">科目一覧</a></nav>
@@ -48,7 +52,7 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
         <p className="m-0 max-w-[980px] text-[13px] font-extrabold tracking-normal text-accent-strong uppercase">Course</p>
         <h1 className="mt-1 mb-2 text-[clamp(30px,5vw,52px)] leading-[1.12]">{course.title}</h1>
         <p className="m-0 max-w-[980px] text-muted">{course.description || ""}</p>
-        <TagRow tags={course.tags} />
+        <TagRow tags={course.tags} hrefForTag={tagSearchHref} />
       </section>
       <section>
         <div className="mt-[34px] mb-3.5 flex items-center justify-between gap-4">
