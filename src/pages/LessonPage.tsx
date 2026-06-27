@@ -1,5 +1,5 @@
-import { FileSymlink } from "lucide-react";
-import { findCourse, findLesson, findTerm, formatBytes, formatDate } from "../catalog";
+import { ChevronLeft, ChevronRight, FileSymlink } from "lucide-react";
+import { compareLessonNo, findCourse, findLesson, findTerm, formatBytes, formatDate, lessonHref } from "../catalog";
 import { LessonAgeWarningPill, Notice, Pill, TagRow } from "../components/ui";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import type { Catalog } from "../types";
@@ -10,6 +10,14 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
   const course = lesson ? findCourse(catalog, lesson.courseId) : undefined;
   const term = lesson ? findTerm(catalog, lesson.termId) : undefined;
   const latestTerm = lesson ? findTerm(catalog, lesson.latestCourseTermId) : undefined;
+  const sameTermLessons = lesson
+    ? catalog.lessons
+      .filter((candidate) => candidate.courseId === lesson.courseId && candidate.termId === lesson.termId)
+      .sort(compareLessonNo)
+    : [];
+  const lessonIndex = lesson ? sameTermLessons.findIndex((candidate) => candidate.id === lesson.id) : -1;
+  const previousLesson = lessonIndex > 0 ? sameTermLessons[lessonIndex - 1] : undefined;
+  const nextLesson = lessonIndex >= 0 ? sameTermLessons[lessonIndex + 1] : undefined;
 
   useDocumentTitle(lesson ? `${lesson.title} | 授業資料` : "授業 | UniMagic 過去期授業資料ライブラリ");
 
@@ -45,6 +53,28 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
         <a className="flex min-h-[38px] w-fit cursor-pointer flex-row items-center rounded-lg border border-orange-300 bg-orange-50 px-[13px] py-2 font-[inherit] text-warning no-underline" href={`./course.html?id=${encodeURIComponent(course.id)}&term=${encodeURIComponent(lesson.latestCourseTermId || lesson.termId)}`}>
           <FileSymlink /> より新しい開講期{latestTerm ? `（${latestTerm.label}）` : ""}の資料があります
         </a>
+      )}
+      {(previousLesson || nextLesson) && (
+        <nav className="mt-6 flex flex-row gap-3 h-16 w-full" aria-label="前後の授業">
+          {previousLesson ? (
+            <a className="flex-1 flex items-center gap-2 rounded-lg border border-line bg-surface text-ink no-underline" href={lessonHref(previousLesson)}>
+              <ChevronLeft className="shrink-0 text-accent-strong" />
+              <span className="min-w-0">
+                <span className="block text-xs font-bold text-muted">前の授業</span>
+                <span className="block font-bold">第{previousLesson.lessonNo}回 {previousLesson.title}</span>
+              </span>
+            </a>
+          ) : <span className="flex-1"/>}
+          {nextLesson ? (
+            <a className="flex-1 flex items-center justify-end gap-2 rounded-lg border border-line bg-surface text-right text-ink no-underline" href={lessonHref(nextLesson)}>
+              <span className="min-w-0">
+                <span className="block text-xs font-bold text-muted">次の授業</span>
+                <span className="block font-bold">第{nextLesson.lessonNo}回 {nextLesson.title}</span>
+              </span>
+              <ChevronRight className="shrink-0 text-accent-strong" />
+            </a>
+          ) : <span className="flex-1"/>}
+        </nav>
       )}
       <section>
         <div className="mt-[34px] mb-3.5 flex items-center justify-between gap-4">
