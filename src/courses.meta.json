@@ -94,7 +94,7 @@
     {
       "id": "world-specialized",
       "title": "ワールド専攻科",
-      "description": "VRChatワールド制作に必要なPrefab、同期、エラー対応、軽量化を扱う専科授業です。",
+      "description": "VRChatワールド制作に必要なPrefab、同期、エラー対応、軽量化を扱う専攻科授業です。",
       "tags": [
         "unity",
         "world",
