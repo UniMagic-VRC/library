@@ -86,8 +86,7 @@
       "description": "Timeline、Particle System、Shaderを使ったパーティクルライブ制作を扱う授業です。",
       "tags": [
         "unity",
-        "particle",
-        "live",
+        "particle-live",
         "timeline"
       ]
     },
@@ -1052,8 +1051,7 @@
       "description": "パーティクルライブ制作の全体像、Unity・Timeline・Particle Systemの準備、最初の発火演出を扱います。",
       "date": "2025-09-29",
       "tags": [
-        "live",
-        "particle",
+        "particle-live",
         "particle-system",
         "timeline",
         "unity"
@@ -1067,8 +1065,7 @@
       "description": "Particle Systemの主要モジュールを整理し、Emission・Shape・Velocity・Color・Sizeなどの調整項目を扱います。",
       "date": "2025-09-30",
       "tags": [
-        "live",
-        "particle",
+        "particle-live",
         "particle-system",
         "timeline",
         "unity"
@@ -1082,8 +1079,7 @@
       "description": "複数のParticle Systemを空間に配置し、Timeline上で発火タイミングや広がりを組み立てる方法を扱います。",
       "date": "2025-10-01",
       "tags": [
-        "live",
-        "particle",
+        "particle-live",
         "particle-system",
         "timeline",
         "unity"
@@ -1097,8 +1093,7 @@
       "description": "Shader・Material・Renderer設定を使い、発光・透明感・色味などパーティクルの見た目を仕上げる方法を扱います。",
       "date": "2025-10-02",
       "tags": [
-        "live",
-        "particle",
+        "particle-live",
         "particle-system",
         "shader",
         "timeline",
@@ -1113,9 +1108,8 @@
       "description": "TimelineやAnimationで演出に緩急を付け、視線誘導やリズムに合わせた魅力的な動きを作る方法を扱います。",
       "date": "2025-10-03",
       "tags": [
-        "live",
         "motion",
-        "particle",
+        "particle-live",
         "timeline",
         "unity"
       ]
@@ -1360,8 +1354,7 @@
       "id": "particle-live",
       "label": "パーティクルライブ",
       "tags": [
-        "particle",
-        "live"
+        "particle-live"
       ]
     }
   ]
