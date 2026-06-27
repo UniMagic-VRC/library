@@ -93,7 +93,7 @@
     },
     {
       "id": "world-specialized",
-      "title": "ワールド専科",
+      "title": "ワールド専攻科",
       "description": "VRChatワールド制作に必要なPrefab、同期、エラー対応、軽量化を扱う専科授業です。",
       "tags": [
         "unity",
@@ -235,7 +235,7 @@
       "courseId": "world-specialized",
       "lessonNo": "00",
       "title": "What is UniMagic for Your Next World",
-      "description": "ワールド専科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
+      "description": "ワールド専攻科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
       "date": "2024-02-12",
       "tags": [
         "advanced",
@@ -309,7 +309,7 @@
       "courseId": "world-specialized",
       "lessonNo": "00",
       "title": "What is UniMagic for Your Next World",
-      "description": "ワールド専科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
+      "description": "ワールド専攻科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
       "date": "2024-03-11",
       "tags": [
         "advanced",
