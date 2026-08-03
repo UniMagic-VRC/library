@@ -32,7 +32,11 @@ export function HomePage({ catalog }: { catalog: Catalog }) {
 function CourseCard({ catalog, course }: { catalog: Catalog; course: Course }) {
   const lessons = lessonsForCourse(catalog, course.id);
   const termCount = new Set(lessons.map((lesson) => lesson.termId)).size;
-  const lessonCount = new Set(lessons.map((lesson) => lesson.lessonNo)).size;
+  const lessonCountByTerm = new Map<string, number>();
+  for (const lesson of lessons) {
+    lessonCountByTerm.set(lesson.termId, (lessonCountByTerm.get(lesson.termId) || 0) + 1);
+  }
+  const lessonCount = Math.max(0, ...lessonCountByTerm.values());
 
   return (
     <a className="grid content-start gap-3.5 rounded-lg border border-line bg-surface p-5 text-inherit no-underline shadow-card" href={`./course.html?id=${encodeURIComponent(course.id)}`}>
