@@ -44,6 +44,11 @@
       "id": "term-07",
       "label": "7期",
       "startsAt": "2025-10-01"
+    },
+    {
+      "id": "term-08",
+      "label": "8期",
+      "startsAt": "2026-08-01"
     }
   ],
   "courses": [
@@ -1313,6 +1318,169 @@
         "blender",
         "fbx",
         "modeling",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "01",
+      "title": "Let's make it 0 to 1",
+      "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
+      "date": "2026-08-10",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "02",
+      "title": "お前はもう、動いている",
+      "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
+      "date": "2026-08-11",
+      "tags": [
+        "animation",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "03",
+      "title": "アバターギミック、アッセンブル！",
+      "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
+      "date": "2026-08-12",
+      "tags": [
+        "animation",
+        "animator",
+        "avatar",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "04",
+      "title": "俺はパーを出したぞ！(宣言)",
+      "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
+      "date": "2026-08-13",
+      "tags": [
+        "avatar",
+        "expression-menu",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "05",
+      "title": "プログラミング的思考のススメ",
+      "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
+      "date": "2026-08-14",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "programming-thinking",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "06",
+      "title": "How to Debug?",
+      "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
+      "date": "2026-08-17",
+      "tags": [
+        "avatar",
+        "debug",
+        "gimmick",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "avatar-gimmick-basic",
+      "lessonNo": "07",
+      "title": "今どき流行りのModular Avatar",
+      "description": "Modular Avatarを使った非破壊のメニュー追加、Animator統合、Object Toggleなどのギミック構成を扱います。",
+      "date": "2026-08-18",
+      "tags": [
+        "avatar",
+        "gimmick",
+        "modular-avatar",
+        "unity",
+        "vrchat"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "01",
+      "title": "パーティクルライブの一歩目を",
+      "description": "パーティクルライブの概要、Unityの基本操作、制作フロー、修了制作までの学習全体像を扱います。",
+      "date": "2026-08-10",
+      "tags": [
+        "particle-live",
+        "production-flow",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "02",
+      "title": "パーティクルライブの目録を",
+      "description": "Timelineの基本、キーフレームによる変化の作成、Animationウィンドウとの連携を扱います。",
+      "date": "2026-08-11",
+      "tags": [
+        "animation",
+        "keyframe",
+        "particle-live",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "03",
+      "title": "パーティクルライブの散在を",
+      "description": "Particle Systemを構成する出現位置・色・大きさ・動き・Materialを理解し、既存素材を分解・改変する方法を扱います。",
+      "date": "2026-08-17",
+      "tags": [
+        "material",
+        "particle-live",
+        "particle-system",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "04",
+      "title": "パーティクルライブの現像を",
+      "description": "Renderer・Material・Shaderの関係と、Particle Systemの描画や発光・視界ジャックなどの見せ方を扱います。",
+      "date": "2026-08-18",
+      "tags": [
+        "material",
+        "particle-live",
+        "particle-system",
+        "shader",
         "unity"
       ]
     }

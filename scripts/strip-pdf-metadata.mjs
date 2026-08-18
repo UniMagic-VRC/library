@@ -27,16 +27,21 @@ function run(command, args, options = {}) {
     stdio: ["ignore", "pipe", "pipe"],
   });
 
+  const allowedStatuses = options.allowedStatuses ?? [0];
+
   if (result.error) {
     throw new SanitizerError(
       options.failureMessage ?? `Unable to execute ${JSON.stringify(command)}: ${result.error.message}`,
     );
   }
-  if (result.status !== 0) {
+  if (!allowedStatuses.includes(result.status)) {
     throw new SanitizerError(
       options.failureMessage ??
         `${JSON.stringify(command)} exited with status ${result.status ?? "unknown"}`,
     );
+  }
+  if (result.status !== 0 && result.stderr) {
+    console.warn(result.stderr.toString());
   }
 
   return result.stdout;
@@ -193,6 +198,7 @@ async function sanitize() {
         qpdf,
         [candidate.absolutePath, "--remove-info", "--remove-metadata", candidate.outputPath],
         {
+          allowedStatuses: [0, 3],
           failureMessage: `qpdf failed while sanitizing ${JSON.stringify(candidate.relativePath)}`,
         },
       );
