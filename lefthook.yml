@@ -1,0 +1,4 @@
+pre-commit:
+  commands:
+    strip-pdf-metadata:
+      run: node scripts/strip-pdf-metadata.mjs
