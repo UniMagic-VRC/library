@@ -1425,6 +1425,64 @@
         "unity",
         "vrchat"
       ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "01",
+      "title": "パーティクルライブの一歩目を",
+      "description": "パーティクルライブの概要、Unityの基本操作、制作フロー、修了制作までの学習全体像を扱います。",
+      "date": "2026-08-18",
+      "tags": [
+        "particle-live",
+        "production-flow",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "02",
+      "title": "パーティクルライブの目録を",
+      "description": "Timelineの基本、キーフレームによる変化の作成、Animationウィンドウとの連携を扱います。",
+      "date": "2026-08-18",
+      "tags": [
+        "animation",
+        "keyframe",
+        "particle-live",
+        "timeline",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "03",
+      "title": "パーティクルライブの散在を",
+      "description": "Particle Systemを構成する出現位置・色・大きさ・動き・Materialを理解し、既存素材を分解・改変する方法を扱います。",
+      "date": "2026-08-18",
+      "tags": [
+        "material",
+        "particle-live",
+        "particle-system",
+        "unity"
+      ]
+    },
+    {
+      "termId": "term-08",
+      "courseId": "particle-live",
+      "lessonNo": "04",
+      "title": "パーティクルライブの現像を",
+      "description": "Renderer・Material・Shaderの関係と、Particle Systemの描画や発光・視界ジャックなどの見せ方を扱います。",
+      "date": "2026-08-18",
+      "tags": [
+        "material",
+        "particle-live",
+        "particle-system",
+        "shader",
+        "unity"
+      ]
     }
   ],
   "searchViews": [
