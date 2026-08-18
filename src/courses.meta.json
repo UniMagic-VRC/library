@@ -1327,7 +1327,7 @@
       "lessonNo": "01",
       "title": "Let's make it 0 to 1",
       "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-10",
       "tags": [
         "avatar",
         "gimmick",
@@ -1341,7 +1341,7 @@
       "lessonNo": "02",
       "title": "お前はもう、動いている",
       "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-11",
       "tags": [
         "animation",
         "avatar",
@@ -1356,7 +1356,7 @@
       "lessonNo": "03",
       "title": "アバターギミック、アッセンブル！",
       "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-12",
       "tags": [
         "animation",
         "animator",
@@ -1372,7 +1372,7 @@
       "lessonNo": "04",
       "title": "俺はパーを出したぞ！(宣言)",
       "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-13",
       "tags": [
         "avatar",
         "expression-menu",
@@ -1387,7 +1387,7 @@
       "lessonNo": "05",
       "title": "プログラミング的思考のススメ",
       "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-14",
       "tags": [
         "avatar",
         "gimmick",
@@ -1402,7 +1402,7 @@
       "lessonNo": "06",
       "title": "How to Debug?",
       "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-17",
       "tags": [
         "avatar",
         "debug",
@@ -1432,7 +1432,7 @@
       "lessonNo": "01",
       "title": "パーティクルライブの一歩目を",
       "description": "パーティクルライブの概要、Unityの基本操作、制作フロー、修了制作までの学習全体像を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-10",
       "tags": [
         "particle-live",
         "production-flow",
@@ -1446,7 +1446,7 @@
       "lessonNo": "02",
       "title": "パーティクルライブの目録を",
       "description": "Timelineの基本、キーフレームによる変化の作成、Animationウィンドウとの連携を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-11",
       "tags": [
         "animation",
         "keyframe",
@@ -1461,7 +1461,7 @@
       "lessonNo": "03",
       "title": "パーティクルライブの散在を",
       "description": "Particle Systemを構成する出現位置・色・大きさ・動き・Materialを理解し、既存素材を分解・改変する方法を扱います。",
-      "date": "2026-08-18",
+      "date": "2026-08-17",
       "tags": [
         "material",
         "particle-live",
