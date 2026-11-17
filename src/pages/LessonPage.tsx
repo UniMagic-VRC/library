@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight, FileSymlink } from "lucide-react";
 import { compareLessonNo, findCourse, findLesson, findTerm, formatBytes, formatDate, lessonHref } from "../catalog";
 import { LessonAgeWarningPill, Notice, Pill, TagRow } from "../components/ui";
+import { PdfViewer } from "../components/PdfViewer";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import type { Catalog } from "../types";
 
@@ -87,12 +88,12 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
         </div>
         <div className="grid gap-2" aria-live="polite">
           {lesson.files.map((file) => (
-            <article key={file.path} className="grid grid-cols-1 gap-2">
+            <article key={file.path} className="grid min-w-0 grid-cols-1 gap-2">
               <div className="flex flex-wrap items-center gap-2.5">
                 <strong>{file.name}</strong>
                 <div className="text-sm text-muted">{formatBytes(file.size)}</div>
               </div>
-              <iframe className="min-h-[min(86vh,980px)] w-full rounded-none border-0 bg-white max-[760px]:min-h-[60vh]" src={file.path} title={file.name} loading="lazy" />
+              <PdfViewer src={file.path} title={file.name} />
             </article>
           ))}
         </div>
