@@ -14,15 +14,25 @@ const buttonClass = "inline-flex size-10 shrink-0 cursor-pointer items-center ju
 
 type PdfState = { status: "loading" | "error" } | { status: "ready"; document: PDFDocumentProxy };
 
-export function PdfViewer({ src, title }: { src: string; title: string }) {
+export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
+  src: string;
+  title: string;
+  initialPage?: number;
+  onPageChange?: (page: number) => void;
+}) {
   const viewportRef = useRef<HTMLDivElement>(null);
   const canvasHostRef = useRef<HTMLDivElement>(null);
   const [pdf, setPdf] = useState<PdfState>({ status: "loading" });
   const [renderStatus, setRenderStatus] = useState<"loading" | "ready" | "error">("loading");
   const [availableWidth, setAvailableWidth] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [selectedPage, setPageNumber] = useState(initialPage);
   const [zoom, setZoom] = useState(1);
   const pageCount = pdf.status === "ready" ? pdf.document.numPages : 0;
+  const pageNumber = Number.isSafeInteger(selectedPage) && selectedPage >= 1 && selectedPage <= pageCount ? selectedPage : 1;
+
+  useEffect(() => {
+    if (pageCount > 0) onPageChange?.(pageNumber);
+  }, [onPageChange, pageCount, pageNumber]);
 
   useEffect(() => {
     let active = true;
@@ -126,7 +136,10 @@ export function PdfViewer({ src, title }: { src: string; title: string }) {
 
   function movePage(offset: number) {
     if (pageCount > 0) {
-      setPageNumber((current) => Math.max(1, Math.min(pageCount, current + offset)));
+      setPageNumber((current) => {
+        const page = Number.isSafeInteger(current) && current >= 1 && current <= pageCount ? current : 1;
+        return Math.max(1, Math.min(pageCount, page + offset));
+      });
     }
   }
 

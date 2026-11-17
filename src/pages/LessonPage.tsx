@@ -5,8 +5,19 @@ import { PdfViewer } from "../components/PdfViewer";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import type { Catalog } from "../types";
 
+function updatePdfPageUrl(page: number) {
+  const url = new URL(window.location.href);
+  const value = String(page);
+  if (url.searchParams.get("page") === value) return;
+
+  url.searchParams.set("page", value);
+  window.history.replaceState(window.history.state, "", url);
+}
+
 export function LessonPage({ catalog }: { catalog: Catalog }) {
   const params = new URLSearchParams(window.location.search);
+  const requestedPage = params.get("page");
+  const initialPage = requestedPage && /^\d+$/.test(requestedPage) ? Number(requestedPage) : 1;
   const lesson = findLesson(catalog, params.get("term"), params.get("course"), params.get("lesson"));
   const course = lesson ? findCourse(catalog, lesson.courseId) : undefined;
   const term = lesson ? findTerm(catalog, lesson.termId) : undefined;
@@ -87,13 +98,18 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
           <span className="text-sm text-muted">{lesson.files.length} 件</span>
         </div>
         <div className="grid gap-2" aria-live="polite">
-          {lesson.files.map((file) => (
+          {lesson.files.map((file, index) => (
             <article key={file.path} className="grid min-w-0 grid-cols-1 gap-2">
               <div className="flex flex-wrap items-center gap-2.5">
                 <strong>{file.name}</strong>
                 <div className="text-sm text-muted">{formatBytes(file.size)}</div>
               </div>
-              <PdfViewer src={file.path} title={file.name} />
+              <PdfViewer
+                src={file.path}
+                title={file.name}
+                initialPage={index === 0 ? initialPage : 1}
+                onPageChange={index === 0 ? updatePdfPageUrl : undefined}
+              />
             </article>
           ))}
         </div>
