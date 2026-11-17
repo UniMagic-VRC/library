@@ -1,15 +1,12 @@
 /// <reference types="vite/client" />
 
-import { ChevronLeft, ChevronRight, ExternalLink, Minus, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist";
 import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url";
 import { useEffect, useRef, useState, type MouseEvent } from "react";
 import { PdfSeekBar } from "./PdfSeekBar";
 import { appendPdfPageLinks, findPdfTextLinks } from "./PdfPageLinks";
 
-const minZoom = 0.5;
-const maxZoom = 2;
-const zoomStep = 0.25;
 const buttonClass = "inline-flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-md text-ink hover:bg-surface-strong focus-visible:outline-2 focus-visible:outline-accent-strong disabled:cursor-default disabled:opacity-40 disabled:hover:bg-transparent";
 
 type PdfState = { status: "loading" | "error" } | { status: "ready"; document: PDFDocumentProxy };
@@ -26,7 +23,6 @@ export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
   const [renderStatus, setRenderStatus] = useState<"loading" | "ready" | "error">("loading");
   const [availableWidth, setAvailableWidth] = useState(0);
   const [selectedPage, setPageNumber] = useState(initialPage);
-  const [zoom, setZoom] = useState(1);
   const pageCount = pdf.status === "ready" ? pdf.document.numPages : 0;
   const pageNumber = Number.isSafeInteger(selectedPage) && selectedPage >= 1 && selectedPage <= pageCount ? selectedPage : 1;
 
@@ -84,8 +80,8 @@ export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
       if (!active) return;
 
       const naturalWidth = page.getViewport({ scale: 1 }).width;
-      const pageViewport = page.getViewport({ scale: availableWidth * zoom / naturalWidth });
-      // Bound the backing canvas when zooming on high-density screens.
+      const pageViewport = page.getViewport({ scale: availableWidth / naturalWidth });
+      // Bound the backing canvas on high-density screens.
       const pixelRatio = Math.min(window.devicePixelRatio, 2, Math.sqrt(16_000_000 / (pageViewport.width * pageViewport.height)));
       canvas.width = Math.max(1, Math.floor(pageViewport.width * pixelRatio));
       canvas.height = Math.max(1, Math.floor(pageViewport.height * pixelRatio));
@@ -129,7 +125,7 @@ export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
         canvas.height = 0;
       }
     };
-  }, [availableWidth, pageNumber, pdf, title, zoom]);
+  }, [availableWidth, pageNumber, pdf, title]);
 
   const hasError = pdf.status === "error" || renderStatus === "error";
   const loading = !hasError && (pdf.status === "loading" || renderStatus === "loading");
@@ -162,17 +158,6 @@ export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
           </span>
           <button type="button" aria-label="次のページ" className={buttonClass} disabled={pageNumber >= pageCount} onClick={() => movePage(1)}>
             <ChevronRight size={20} aria-hidden="true" />
-          </button>
-        </div>
-        <div role="group" aria-label="拡大・縮小" className="flex items-center gap-1">
-          <button type="button" aria-label="縮小" className={buttonClass} disabled={!pageCount || zoom <= minZoom} onClick={() => setZoom(zoom - zoomStep)}>
-            <Minus size={18} aria-hidden="true" />
-          </button>
-          <button type="button" aria-label="表示を画面幅に合わせる" title="幅に合わせる" className="min-h-10 cursor-pointer rounded-md px-1 text-sm tabular-nums hover:bg-surface-strong disabled:cursor-default disabled:opacity-40" disabled={!pageCount} onClick={() => setZoom(1)}>
-            {Math.round(zoom * 100)}%
-          </button>
-          <button type="button" aria-label="拡大" className={buttonClass} disabled={!pageCount || zoom >= maxZoom} onClick={() => setZoom(zoom + zoomStep)}>
-            <Plus size={18} aria-hidden="true" />
           </button>
         </div>
         <a href={src} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex min-h-10 items-center gap-1 whitespace-nowrap rounded-md px-2 text-sm font-bold text-accent-strong hover:bg-surface-strong">
