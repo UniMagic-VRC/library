@@ -109,6 +109,7 @@ export function LessonPage({ catalog }: { catalog: Catalog }) {
                 title={file.name}
                 initialPage={index === 0 ? initialPage : 1}
                 onPageChange={index === 0 ? updatePdfPageUrl : undefined}
+                defaultKeyboardTarget={index === 0}
               />
             </article>
           ))}

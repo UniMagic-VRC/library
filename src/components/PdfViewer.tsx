@@ -3,7 +3,7 @@
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist";
 import workerUrl from "pdfjs-dist/build/pdf.worker.min.mjs?url";
-import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { useEffect, useEffectEvent, useRef, useState, type MouseEvent } from "react";
 import { PdfSeekBar } from "./PdfSeekBar";
 import { appendPdfPageLinks, findPdfTextLinks } from "./PdfPageLinks";
 
@@ -11,12 +11,14 @@ const buttonClass = "inline-flex size-10 shrink-0 cursor-pointer items-center ju
 
 type PdfState = { status: "loading" | "error" } | { status: "ready"; document: PDFDocumentProxy };
 
-export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
+export function PdfViewer({ src, title, initialPage = 1, onPageChange, defaultKeyboardTarget = false }: {
   src: string;
   title: string;
   initialPage?: number;
   onPageChange?: (page: number) => void;
+  defaultKeyboardTarget?: boolean;
 }) {
+  const viewerRef = useRef<HTMLElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const canvasHostRef = useRef<HTMLDivElement>(null);
   const [pdf, setPdf] = useState<PdfState>({ status: "loading" });
@@ -142,12 +144,32 @@ export function PdfViewer({ src, title, initialPage = 1, onPageChange }: {
   function handlePageClick(event: MouseEvent<HTMLDivElement>) {
     if (!(event.target instanceof HTMLCanvasElement)) return;
 
+    viewportRef.current?.focus({ preventScroll: true });
     const { left, width } = event.target.getBoundingClientRect();
     movePage(event.clientX < left + width / 2 ? -1 : 1);
   }
 
+  const handlePageKeyDown = useEffectEvent((event: KeyboardEvent) => {
+    if (event.defaultPrevented || event.isComposing || !pageCount || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+    if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+
+    const target = event.target;
+    if (!(target instanceof HTMLElement) || target.isContentEditable || target.closest("input, textarea, select, [role=slider]")) return;
+    const focusedViewer = target.closest("[data-pdf-viewer]");
+    if (focusedViewer ? focusedViewer !== viewerRef.current : !defaultKeyboardTarget) return;
+
+    event.preventDefault();
+    movePage(event.key === "ArrowLeft" ? -1 : 1);
+  });
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => handlePageKeyDown(event);
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, []);
+
   return (
-    <section aria-label={`${title}の PDF ビューア`} className="min-w-0 overflow-hidden rounded-lg border border-line bg-surface">
+    <section ref={viewerRef} data-pdf-viewer aria-label={`${title}の PDF ビューア`} className="min-w-0 overflow-hidden rounded-lg border border-line bg-surface">
       <div className="flex flex-wrap items-center gap-x-4 gap-y-1 border-b border-line px-2 py-1">
         <div role="group" aria-label="ページ移動" className="flex items-center gap-1">
           <button type="button" aria-label="前のページ" className={buttonClass} disabled={pageNumber <= 1} onClick={() => movePage(-1)}>
