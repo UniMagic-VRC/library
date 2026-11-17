@@ -2,7 +2,15 @@ import { findCourse, findTerm, formatDate, lessonHref } from "../catalog";
 import type { Catalog, Lesson } from "../types";
 import { LessonAgeWarningPill, Pill, TagRow } from "./ui";
 
-export function LessonCard({ catalog, lesson, showCourse = false }: { catalog: Catalog; lesson: Lesson; showCourse?: boolean }) {
+export function LessonCard({
+  catalog,
+  lesson,
+  showCourse = false,
+}: {
+  catalog: Catalog;
+  lesson: Lesson;
+  showCourse?: boolean;
+}) {
   const course = findCourse(catalog, lesson.courseId);
   const term = findTerm(catalog, lesson.termId);
   const title = showCourse
@@ -21,7 +29,11 @@ export function LessonCard({ catalog, lesson, showCourse = false }: { catalog: C
         <div className="flex flex-col gap-2">
           <div className="flex flex-wrap items-center gap-2">
             <LessonAgeWarningPill lastUpdated={lesson.lastUpdated} />
-            {lesson.isLatestForCourseTerm ? <Pill>最新開講期</Pill> : <Pill tone="warning">過去開講期</Pill>}
+            {lesson.isLatestForCourseTerm ? (
+              <Pill>最新開講期</Pill>
+            ) : (
+              <Pill tone="warning">過去開講期</Pill>
+            )}
             <Pill>{term?.label || lesson.termId}</Pill>
             <Pill>最終更新 {formatDate(lesson.lastUpdated)}</Pill>
           </div>

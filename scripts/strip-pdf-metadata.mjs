@@ -1,15 +1,7 @@
 #!/usr/bin/env node
 
 import { constants as fsConstants, createReadStream } from "node:fs";
-import {
-  access,
-  chmod,
-  copyFile,
-  lstat,
-  mkdtemp,
-  rename,
-  rm,
-} from "node:fs/promises";
+import { access, chmod, copyFile, lstat, mkdtemp, rename, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { basename, dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { createHash, randomUUID } from "node:crypto";
@@ -31,7 +23,8 @@ function run(command, args, options = {}) {
 
   if (result.error) {
     throw new SanitizerError(
-      options.failureMessage ?? `Unable to execute ${JSON.stringify(command)}: ${result.error.message}`,
+      options.failureMessage ??
+        `Unable to execute ${JSON.stringify(command)}: ${result.error.message}`,
     );
   }
   if (!allowedStatuses.includes(result.status)) {
@@ -54,15 +47,7 @@ function git(repoRoot, args, options = {}) {
 function stagedPdfPaths(repoRoot) {
   const output = git(
     repoRoot,
-    [
-      "diff",
-      "--cached",
-      "--name-only",
-      "-z",
-      "--diff-filter=ACMR",
-      "--find-renames",
-      "--",
-    ],
+    ["diff", "--cached", "--name-only", "-z", "--diff-filter=ACMR", "--find-renames", "--"],
     { encoding: "buffer", failureMessage: "Unable to inspect staged paths" },
   );
 
@@ -98,11 +83,7 @@ function assertNoUnstagedDivergence(repoRoot, relativePath) {
 async function inspectCandidate(repoRoot, relativePath) {
   const absolutePath = resolve(repoRoot, relativePath);
   const pathFromRoot = relative(repoRoot, absolutePath);
-  if (
-    isAbsolute(pathFromRoot) ||
-    pathFromRoot === ".." ||
-    pathFromRoot.startsWith(`..${sep}`)
-  ) {
+  if (isAbsolute(pathFromRoot) || pathFromRoot === ".." || pathFromRoot.startsWith(`..${sep}`)) {
     throw new SanitizerError(`Staged path escapes the repository: ${JSON.stringify(relativePath)}`);
   }
 

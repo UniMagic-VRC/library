@@ -12,8 +12,8 @@ export default defineConfig({
         index: resolve(__dirname, "index.html"),
         course: resolve(__dirname, "course.html"),
         search: resolve(__dirname, "search.html"),
-        lesson: resolve(__dirname, "lesson.html")
-      }
-    }
-  }
+        lesson: resolve(__dirname, "lesson.html"),
+      },
+    },
+  },
 });

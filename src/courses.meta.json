@@ -56,55 +56,31 @@
       "id": "blender-basic",
       "title": "Blender本科",
       "description": "Blenderによるモデリング、リギング、UV、Unity連携の基礎を扱う本科授業です。",
-      "tags": [
-        "blender",
-        "modeling",
-        "3d",
-        "basic"
-      ]
+      "tags": ["blender", "modeling", "3d", "basic"]
     },
     {
       "id": "unity-basic",
       "title": "Unity本科",
       "description": "Unityを使ったVRChatアバター改変の基礎を扱う本科授業です。",
-      "tags": [
-        "unity",
-        "avatar",
-        "vrchat",
-        "basic"
-      ]
+      "tags": ["unity", "avatar", "vrchat", "basic"]
     },
     {
       "id": "avatar-gimmick-basic",
       "title": "アバターギミック本科",
       "description": "Animation、Animator、Expression Menuなどを使ったVRChatアバターギミック制作を扱う本科授業です。",
-      "tags": [
-        "unity",
-        "avatar",
-        "gimmick",
-        "vrchat"
-      ]
+      "tags": ["unity", "avatar", "gimmick", "vrchat"]
     },
     {
       "id": "particle-live",
       "title": "パーティクルライブ科",
       "description": "Timeline、Particle System、Shaderを使ったパーティクルライブ制作を扱う授業です。",
-      "tags": [
-        "unity",
-        "particle-live",
-        "timeline"
-      ]
+      "tags": ["unity", "particle-live", "timeline"]
     },
     {
       "id": "world-specialized",
       "title": "ワールド専攻科",
       "description": "VRChatワールド制作に必要なPrefab、同期、エラー対応、軽量化を扱う専攻科授業です。",
-      "tags": [
-        "unity",
-        "world",
-        "vrchat",
-        "advanced"
-      ]
+      "tags": ["unity", "world", "vrchat", "advanced"]
     }
   ],
   "lessons": [
@@ -115,13 +91,7 @@
       "title": "Welcome to UniMagic!",
       "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2023-06-26",
-      "tags": [
-        "avatar",
-        "basic",
-        "orientation",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "orientation", "unity", "vrchat"]
     },
     {
       "termId": "term-00",
@@ -130,14 +100,7 @@
       "title": "素材が変われば色も変わる",
       "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2023-06-27",
-      "tags": [
-        "avatar",
-        "basic",
-        "color",
-        "material",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "color", "material", "unity", "vrchat"]
     },
     {
       "termId": "term-00",
@@ -146,14 +109,7 @@
       "title": "アイテムは装備しないと使えない",
       "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2023-06-28",
-      "tags": [
-        "accessory",
-        "avatar",
-        "basic",
-        "bone",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["accessory", "avatar", "basic", "bone", "unity", "vrchat"]
     },
     {
       "termId": "term-00",
@@ -162,14 +118,7 @@
       "title": "身に纏うは無窮の風",
       "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2023-06-29",
-      "tags": [
-        "avatar",
-        "basic",
-        "clothing",
-        "skinning",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "clothing", "skinning", "unity", "vrchat"]
     },
     {
       "termId": "term-01",
@@ -178,13 +127,7 @@
       "title": "Welcome to UniMagic!",
       "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2023-09-25",
-      "tags": [
-        "avatar",
-        "basic",
-        "orientation",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "orientation", "unity", "vrchat"]
     },
     {
       "termId": "term-01",
@@ -193,14 +136,7 @@
       "title": "素材が変われば色も変わる",
       "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2023-09-26",
-      "tags": [
-        "avatar",
-        "basic",
-        "color",
-        "material",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "color", "material", "unity", "vrchat"]
     },
     {
       "termId": "term-01",
@@ -209,14 +145,7 @@
       "title": "アイテムは装備しないと使えない",
       "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2023-09-27",
-      "tags": [
-        "accessory",
-        "avatar",
-        "basic",
-        "bone",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["accessory", "avatar", "basic", "bone", "unity", "vrchat"]
     },
     {
       "termId": "term-01",
@@ -225,14 +154,7 @@
       "title": "身に纏うは無窮の風",
       "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2023-09-28",
-      "tags": [
-        "avatar",
-        "basic",
-        "clothing",
-        "skinning",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "clothing", "skinning", "unity", "vrchat"]
     },
     {
       "termId": "term-02a",
@@ -241,12 +163,7 @@
       "title": "What is UniMagic for Your Next World",
       "description": "ワールド専攻科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
       "date": "2024-02-12",
-      "tags": [
-        "advanced",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02a",
@@ -255,13 +172,7 @@
       "title": "きみ、流れるようにあんぱっくしたね？",
       "description": "Prefabの構造、Unpackの考え方、GameObject・Component・Hierarchy上での編集手順を扱います。",
       "date": "2024-02-13",
-      "tags": [
-        "advanced",
-        "prefab",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "prefab", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02a",
@@ -270,13 +181,7 @@
       "title": "君たちはどうきいるか",
       "description": "VRChatワールドにおける同期の考え方、同期される処理とされない処理、複数プレイヤー間での挙動確認を扱います。",
       "date": "2024-02-14",
-      "tags": [
-        "advanced",
-        "sync",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "sync", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02a",
@@ -285,13 +190,7 @@
       "title": "エラーと向き合う",
       "description": "UnityやVRCSDKのエラー確認、Consoleの読み方、ビルド・アップロード時の原因切り分けと対処を扱います。",
       "date": "2024-02-15",
-      "tags": [
-        "advanced",
-        "debug",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "debug", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02a",
@@ -300,13 +199,7 @@
       "title": "その想い、重すぎて。",
       "description": "ワールドの容量や描画負荷を見直し、不要要素の整理や軽量化で快適に遊べる状態へ近づける方法を扱います。",
       "date": "2024-02-16",
-      "tags": [
-        "advanced",
-        "performance",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "performance", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02b",
@@ -315,12 +208,7 @@
       "title": "What is UniMagic for Your Next World",
       "description": "ワールド専攻科の進め方、VRChatワールド制作の全体像、Unity・VRCSDK環境と課題制作の流れを扱います。",
       "date": "2024-03-11",
-      "tags": [
-        "advanced",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02b",
@@ -329,13 +217,7 @@
       "title": "きみ、流れるようにあんぱっくしたね？",
       "description": "Prefabの構造、Unpackの考え方、GameObject・Component・Hierarchy上での編集手順を扱います。",
       "date": "2024-03-12",
-      "tags": [
-        "advanced",
-        "prefab",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "prefab", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02b",
@@ -344,13 +226,7 @@
       "title": "君たちはどうきいるか",
       "description": "VRChatワールドにおける同期の考え方、同期される処理とされない処理、複数プレイヤー間での挙動確認を扱います。",
       "date": "2024-03-13",
-      "tags": [
-        "advanced",
-        "sync",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "sync", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02b",
@@ -359,13 +235,7 @@
       "title": "エラーと向き合う",
       "description": "UnityやVRCSDKのエラー確認、Consoleの読み方、ビルド・アップロード時の原因切り分けと対処を扱います。",
       "date": "2024-03-14",
-      "tags": [
-        "advanced",
-        "debug",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "debug", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-02b",
@@ -374,13 +244,7 @@
       "title": "その想い、重すぎて。",
       "description": "ワールドの容量や描画負荷を見直し、不要要素の整理や軽量化で快適に遊べる状態へ近づける方法を扱います。",
       "date": "2024-03-15",
-      "tags": [
-        "advanced",
-        "performance",
-        "unity",
-        "vrchat",
-        "world"
-      ]
+      "tags": ["advanced", "performance", "unity", "vrchat", "world"]
     },
     {
       "termId": "term-03",
@@ -389,12 +253,7 @@
       "title": "Let's make it 0 to 1",
       "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2024-06-10",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -403,13 +262,7 @@
       "title": "お前はもう、動いている",
       "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2024-06-11",
-      "tags": [
-        "animation",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -418,14 +271,7 @@
       "title": "アバターギミック、アッセンブル!",
       "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2024-06-12",
-      "tags": [
-        "animation",
-        "animator",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "animator", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -434,13 +280,7 @@
       "title": "俺はパーを出したぞ！(宣言)",
       "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2024-06-13",
-      "tags": [
-        "avatar",
-        "expression-menu",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "expression-menu", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -449,13 +289,7 @@
       "title": "プログラミング的思考のススメ",
       "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2024-06-14",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "programming-thinking",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "programming-thinking", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -464,13 +298,7 @@
       "title": "Welcome to UniMagic!",
       "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2024-06-10",
-      "tags": [
-        "avatar",
-        "basic",
-        "orientation",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "orientation", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -479,12 +307,7 @@
       "title": "“魔法”のことはじめ",
       "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2024-06-11",
-      "tags": [
-        "avatar",
-        "basic",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -493,14 +316,7 @@
       "title": "素材が変われば色も変わる",
       "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2024-06-12",
-      "tags": [
-        "avatar",
-        "basic",
-        "color",
-        "material",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "color", "material", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -509,14 +325,7 @@
       "title": "アイテムは装備しないと使えない",
       "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2024-06-13",
-      "tags": [
-        "accessory",
-        "avatar",
-        "basic",
-        "bone",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["accessory", "avatar", "basic", "bone", "unity", "vrchat"]
     },
     {
       "termId": "term-03",
@@ -525,14 +334,7 @@
       "title": "身に纏うは無窮の風",
       "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2024-06-14",
-      "tags": [
-        "avatar",
-        "basic",
-        "clothing",
-        "skinning",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "clothing", "skinning", "unity", "vrchat"]
     },
     {
       "termId": "term-04",
@@ -541,12 +343,7 @@
       "title": "はじめの一歩、もう一度！",
       "description": "Blenderの基本操作を復習し、オブジェクト操作・視点操作・編集モードを使った最初のモデリングを扱います。",
       "date": "2024-09-09",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling"]
     },
     {
       "termId": "term-04",
@@ -555,12 +352,7 @@
       "title": "点、線、面、立体",
       "description": "頂点・辺・面から立体を作る考え方、メッシュ編集、押し出しや形状調整によるモデリング基礎を扱います。",
       "date": "2024-09-11",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling"]
     },
     {
       "termId": "term-04",
@@ -569,14 +361,7 @@
       "title": "Bling-Bang-Bang-\"Bone\"",
       "description": "ArmatureやBoneの基本を使い、モデルを動かすための骨構造とリギングの入口を扱います。",
       "date": "2024-09-06",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "bone",
-        "modeling",
-        "skinning"
-      ]
+      "tags": ["3d", "basic", "blender", "bone", "modeling", "skinning"]
     },
     {
       "termId": "term-04",
@@ -585,13 +370,7 @@
       "title": "UVなのに、目に見える！",
       "description": "UV展開の考え方、テクスチャとモデル表面の対応付け、見た目を編集するための下準備を扱います。",
       "date": "2024-09-18",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling",
-        "uv"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling", "uv"]
     },
     {
       "termId": "term-04",
@@ -600,14 +379,7 @@
       "title": "Create, Share, Play.",
       "description": "制作物の仕上げ、モデリング手順の見直し、共有やUnity連携を見据えた書き出し準備を扱います。",
       "date": "2024-09-20",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "fbx",
-        "modeling",
-        "unity"
-      ]
+      "tags": ["3d", "basic", "blender", "fbx", "modeling", "unity"]
     },
     {
       "termId": "term-04",
@@ -616,13 +388,7 @@
       "title": "Welcome to UniMagic!",
       "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2024-09-09",
-      "tags": [
-        "avatar",
-        "basic",
-        "orientation",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "orientation", "unity", "vrchat"]
     },
     {
       "termId": "term-04",
@@ -631,12 +397,7 @@
       "title": "魔法 のことはじめ",
       "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2024-09-10",
-      "tags": [
-        "avatar",
-        "basic",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "unity", "vrchat"]
     },
     {
       "termId": "term-04",
@@ -645,14 +406,7 @@
       "title": "素材が変われば色も変わる",
       "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2024-09-11",
-      "tags": [
-        "avatar",
-        "basic",
-        "color",
-        "material",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "color", "material", "unity", "vrchat"]
     },
     {
       "termId": "term-04",
@@ -661,14 +415,7 @@
       "title": "アイテムは装備しないと使えない",
       "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2024-09-12",
-      "tags": [
-        "accessory",
-        "avatar",
-        "basic",
-        "bone",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["accessory", "avatar", "basic", "bone", "unity", "vrchat"]
     },
     {
       "termId": "term-04",
@@ -677,14 +424,7 @@
       "title": "身に纏うは無窮の風",
       "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2024-09-13",
-      "tags": [
-        "avatar",
-        "basic",
-        "clothing",
-        "skinning",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "clothing", "skinning", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -693,12 +433,7 @@
       "title": "Let's make it 0 to 1",
       "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2024-12-02",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -707,13 +442,7 @@
       "title": "お前はもう、動いている",
       "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2024-12-03",
-      "tags": [
-        "animation",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -722,14 +451,7 @@
       "title": "アバターギミック、アッセンブル!",
       "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2024-12-04",
-      "tags": [
-        "animation",
-        "animator",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "animator", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -738,13 +460,7 @@
       "title": "俺はパーを出したぞ！(宣言)",
       "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2024-12-05",
-      "tags": [
-        "avatar",
-        "expression-menu",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "expression-menu", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -753,13 +469,7 @@
       "title": "プログラミング的思考のススメ",
       "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2024-12-06",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "programming-thinking",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "programming-thinking", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -768,13 +478,7 @@
       "title": "How to Debug?",
       "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
       "date": "2024-12-09",
-      "tags": [
-        "avatar",
-        "debug",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "debug", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -783,13 +487,7 @@
       "title": "今どき流行りのModular Avatar",
       "description": "Modular Avatarを使った非破壊のメニュー追加、Animator統合、Object Toggleなどのギミック構成を扱います。",
       "date": "2024-12-10",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "modular-avatar",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "modular-avatar", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -798,12 +496,7 @@
       "title": "はじめの一歩、もう一度！",
       "description": "Blenderの基本操作を復習し、オブジェクト操作・視点操作・編集モードを使った最初のモデリングを扱います。",
       "date": "2024-12-02",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling"]
     },
     {
       "termId": "term-05",
@@ -812,12 +505,7 @@
       "title": "点、線、面、立体",
       "description": "頂点・辺・面から立体を作る考え方、メッシュ編集、押し出しや形状調整によるモデリング基礎を扱います。",
       "date": "2024-12-04",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling"]
     },
     {
       "termId": "term-05",
@@ -826,14 +514,7 @@
       "title": "Bling-Bang-Bang-\"Bone\"",
       "description": "ArmatureやBoneの基本を使い、モデルを動かすための骨構造とリギングの入口を扱います。",
       "date": "2024-12-09",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "bone",
-        "modeling",
-        "skinning"
-      ]
+      "tags": ["3d", "basic", "blender", "bone", "modeling", "skinning"]
     },
     {
       "termId": "term-05",
@@ -842,13 +523,7 @@
       "title": "UVなのに、目に見える！",
       "description": "UV展開の考え方、テクスチャとモデル表面の対応付け、見た目を編集するための下準備を扱います。",
       "date": "2024-12-11",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling",
-        "uv"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling", "uv"]
     },
     {
       "termId": "term-05",
@@ -857,14 +532,7 @@
       "title": "Create, Share, Play",
       "description": "制作物の仕上げ、モデリング手順の見直し、共有やUnity連携を見据えた書き出し準備を扱います。",
       "date": "2024-12-13",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "fbx",
-        "modeling",
-        "unity"
-      ]
+      "tags": ["3d", "basic", "blender", "fbx", "modeling", "unity"]
     },
     {
       "termId": "term-05",
@@ -873,13 +541,7 @@
       "title": "Welcome to UniMagic!",
       "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2024-12-02",
-      "tags": [
-        "avatar",
-        "basic",
-        "orientation",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "orientation", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -888,12 +550,7 @@
       "title": "魔法のことはじめ",
       "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2024-12-03",
-      "tags": [
-        "avatar",
-        "basic",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -902,14 +559,7 @@
       "title": "素材が変われば色も変わる",
       "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2024-12-04",
-      "tags": [
-        "avatar",
-        "basic",
-        "color",
-        "material",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "color", "material", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -918,14 +568,7 @@
       "title": "アイテムは装備しないと使えない",
       "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2024-12-05",
-      "tags": [
-        "accessory",
-        "avatar",
-        "basic",
-        "bone",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["accessory", "avatar", "basic", "bone", "unity", "vrchat"]
     },
     {
       "termId": "term-05",
@@ -934,14 +577,7 @@
       "title": "身に纏うは無窮の風",
       "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2024-12-06",
-      "tags": [
-        "avatar",
-        "basic",
-        "clothing",
-        "skinning",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "clothing", "skinning", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -950,12 +586,7 @@
       "title": "Let's make it 0 to 1",
       "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2025-09-29",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -964,13 +595,7 @@
       "title": "お前はもう、動いている",
       "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2025-09-30",
-      "tags": [
-        "animation",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -979,14 +604,7 @@
       "title": "アバターギミック、アッセンブル!",
       "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2025-10-01",
-      "tags": [
-        "animation",
-        "animator",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "animator", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -995,13 +613,7 @@
       "title": "俺はパーを出したぞ！(宣言)",
       "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2025-10-02",
-      "tags": [
-        "avatar",
-        "expression-menu",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "expression-menu", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1010,13 +622,7 @@
       "title": "プログラミング的思考のススメ",
       "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2025-10-03",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "programming-thinking",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "programming-thinking", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1025,13 +631,7 @@
       "title": "How to Debug?",
       "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
       "date": "2025-10-06",
-      "tags": [
-        "avatar",
-        "debug",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "debug", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1040,13 +640,7 @@
       "title": "今どき流行りのModular Avatar",
       "description": "Modular Avatarを使った非破壊のメニュー追加、Animator統合、Object Toggleなどのギミック構成を扱います。",
       "date": "2025-10-07",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "modular-avatar",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "modular-avatar", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1055,12 +649,7 @@
       "title": "パーティクルライブの一歩目を",
       "description": "パーティクルライブ制作の全体像、Unity・Timeline・Particle Systemの準備、最初の発火演出を扱います。",
       "date": "2025-09-29",
-      "tags": [
-        "particle-live",
-        "particle-system",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["particle-live", "particle-system", "timeline", "unity"]
     },
     {
       "termId": "term-06",
@@ -1069,12 +658,7 @@
       "title": "パーティクルライブの目録を",
       "description": "Particle Systemの主要モジュールを整理し、Emission・Shape・Velocity・Color・Sizeなどの調整項目を扱います。",
       "date": "2025-09-30",
-      "tags": [
-        "particle-live",
-        "particle-system",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["particle-live", "particle-system", "timeline", "unity"]
     },
     {
       "termId": "term-06",
@@ -1083,12 +667,7 @@
       "title": "パーティクルライブの散在を",
       "description": "複数のParticle Systemを空間に配置し、Timeline上で発火タイミングや広がりを組み立てる方法を扱います。",
       "date": "2025-10-01",
-      "tags": [
-        "particle-live",
-        "particle-system",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["particle-live", "particle-system", "timeline", "unity"]
     },
     {
       "termId": "term-06",
@@ -1097,13 +676,7 @@
       "title": "パーティクルライブの現像を",
       "description": "Shader・Material・Renderer設定を使い、発光・透明感・色味などパーティクルの見た目を仕上げる方法を扱います。",
       "date": "2025-10-02",
-      "tags": [
-        "particle-live",
-        "particle-system",
-        "shader",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["particle-live", "particle-system", "shader", "timeline", "unity"]
     },
     {
       "termId": "term-06",
@@ -1112,12 +685,7 @@
       "title": "魅力的な「動き」を作ろう",
       "description": "TimelineやAnimationで演出に緩急を付け、視線誘導やリズムに合わせた魅力的な動きを作る方法を扱います。",
       "date": "2025-10-03",
-      "tags": [
-        "motion",
-        "particle-live",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["motion", "particle-live", "timeline", "unity"]
     },
     {
       "termId": "term-06",
@@ -1126,13 +694,7 @@
       "title": "Welcome to UniMagic!",
       "description": "UniMagicの受講準備、Unity・VCC・VRChatを使ったアバター改変の入口、プロジェクト作成の流れを扱います。",
       "date": "2025-09-29",
-      "tags": [
-        "avatar",
-        "basic",
-        "orientation",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "orientation", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1141,12 +703,7 @@
       "title": "魔法のことはじめ",
       "description": "Unityの基本操作、アバター改変で使うオブジェクト・Inspector・Projectの見方、作業開始までの流れを扱います。",
       "date": "2025-09-30",
-      "tags": [
-        "avatar",
-        "basic",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1155,14 +712,7 @@
       "title": "素材が変われば色も変わる",
       "description": "MaterialやTextureを使った色・見た目の変更、Shader設定、アバター素材の差し替え手順を扱います。",
       "date": "2025-10-01",
-      "tags": [
-        "avatar",
-        "basic",
-        "color",
-        "material",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "color", "material", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1171,14 +721,7 @@
       "title": "アイテムは装備しないと使えない",
       "description": "アイテムやアクセサリをアバターへ取り付けるための階層配置、位置調整、Prefab・Boneへの紐付けを扱います。",
       "date": "2025-10-02",
-      "tags": [
-        "accessory",
-        "avatar",
-        "basic",
-        "bone",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["accessory", "avatar", "basic", "bone", "unity", "vrchat"]
     },
     {
       "termId": "term-06",
@@ -1187,14 +730,7 @@
       "title": "身に纏うは無窮の風",
       "description": "衣装や揺れものをアバターへ馴染ませるための装着手順、PhysBone周辺の確認、見た目の最終調整を扱います。",
       "date": "2025-10-03",
-      "tags": [
-        "avatar",
-        "basic",
-        "clothing",
-        "skinning",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "basic", "clothing", "skinning", "unity", "vrchat"]
     },
     {
       "termId": "term-07",
@@ -1203,13 +739,7 @@
       "title": "UniMagicへようこそ",
       "description": "Blender本科の受講準備、Blenderの画面構成、基本操作、3Dモデル制作の学習全体像を扱います。",
       "date": "2026-03-02",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling",
-        "orientation"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling", "orientation"]
     },
     {
       "termId": "term-07",
@@ -1218,12 +748,7 @@
       "title": "点・線・面・立体",
       "description": "頂点・辺・面から立体を作る考え方、メッシュ編集、押し出しや形状調整によるモデリング基礎を扱います。",
       "date": "2026-03-03",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling"]
     },
     {
       "termId": "term-07",
@@ -1232,14 +757,7 @@
       "title": "Blenderの極意",
       "description": "制作物の仕上げ、モデリング手順の見直し、共有やUnity連携を見据えた書き出し準備を扱います。",
       "date": "2026-03-06",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "fbx",
-        "modeling",
-        "unity"
-      ]
+      "tags": ["3d", "basic", "blender", "fbx", "modeling", "unity"]
     },
     {
       "termId": "term-07",
@@ -1248,14 +766,7 @@
       "title": "骨を作ってみよう",
       "description": "Blenderでボーンを作成し、Armatureを配置してモデルを動かすための骨組みを整える方法を扱います。",
       "date": "2026-03-09",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "bone",
-        "modeling",
-        "production"
-      ]
+      "tags": ["3d", "basic", "blender", "bone", "modeling", "production"]
     },
     {
       "termId": "term-07",
@@ -1264,13 +775,7 @@
       "title": "変形するモデル",
       "description": "モデルを自然に変形させるためのスキニング、ウェイト設定、ボーンとメッシュの関連付けを扱います。",
       "date": "2026-03-11",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "modeling",
-        "skinning"
-      ]
+      "tags": ["3d", "basic", "blender", "modeling", "skinning"]
     },
     {
       "termId": "term-07",
@@ -1279,14 +784,7 @@
       "title": "Go to Unity",
       "description": "BlenderからFBXを書き出し、Unityへ取り込んでスケール・Material・見た目を確認する流れを扱います。",
       "date": "2026-03-13",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "fbx",
-        "modeling",
-        "unity"
-      ]
+      "tags": ["3d", "basic", "blender", "fbx", "modeling", "unity"]
     },
     {
       "termId": "term-07",
@@ -1295,15 +793,7 @@
       "title": "見た目を整えよう",
       "description": "Material・Texture・UVを調整し、モデルの色や質感を整えてUnityで見栄えよく表示する方法を扱います。",
       "date": "2026-03-16",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "color",
-        "modeling",
-        "texture",
-        "uv"
-      ]
+      "tags": ["3d", "basic", "blender", "color", "modeling", "texture", "uv"]
     },
     {
       "termId": "term-07",
@@ -1312,14 +802,7 @@
       "title": "Create Share Play",
       "description": "Blenderで作ったモデルを仕上げ、Unity連携や共有・発表までつなげる制作フローを扱います。",
       "date": "2026-03-18",
-      "tags": [
-        "3d",
-        "basic",
-        "blender",
-        "fbx",
-        "modeling",
-        "unity"
-      ]
+      "tags": ["3d", "basic", "blender", "fbx", "modeling", "unity"]
     },
     {
       "termId": "term-08",
@@ -1328,12 +811,7 @@
       "title": "Let's make it 0 to 1",
       "description": "Animation・Animator・Expression Menuを使い、アバターギミックを0から1つ動かす基本構成を扱います。",
       "date": "2026-08-10",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1342,13 +820,7 @@
       "title": "お前はもう、動いている",
       "description": "Animation ClipとAnimatorの状態遷移を使い、オブジェクトや見た目を動かすギミック制作を扱います。",
       "date": "2026-08-11",
-      "tags": [
-        "animation",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1357,14 +829,7 @@
       "title": "アバターギミック、アッセンブル！",
       "description": "複数のAnimationやAnimator設定を組み合わせ、Expression Menuから操作できるギミックとして組み立てる方法を扱います。",
       "date": "2026-08-12",
-      "tags": [
-        "animation",
-        "animator",
-        "avatar",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["animation", "animator", "avatar", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1373,13 +838,7 @@
       "title": "俺はパーを出したぞ！(宣言)",
       "description": "Expression Parametersで状態を宣言し、Animatorの条件分岐やメニュー操作へつなげる考え方を扱います。",
       "date": "2026-08-13",
-      "tags": [
-        "avatar",
-        "expression-menu",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "expression-menu", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1388,13 +847,7 @@
       "title": "プログラミング的思考のススメ",
       "description": "変数・条件分岐・状態管理といったプログラミング的思考を、アバターギミック設計へ落とし込む方法を扱います。",
       "date": "2026-08-14",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "programming-thinking",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "programming-thinking", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1403,13 +856,7 @@
       "title": "How to Debug?",
       "description": "ギミックが動かないときのConsole確認、Animator・Parameter・Expression設定の切り分け、修正手順を扱います。",
       "date": "2026-08-17",
-      "tags": [
-        "avatar",
-        "debug",
-        "gimmick",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "debug", "gimmick", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1418,13 +865,7 @@
       "title": "今どき流行りのModular Avatar",
       "description": "Modular Avatarを使った非破壊のメニュー追加、Animator統合、Object Toggleなどのギミック構成を扱います。",
       "date": "2026-08-18",
-      "tags": [
-        "avatar",
-        "gimmick",
-        "modular-avatar",
-        "unity",
-        "vrchat"
-      ]
+      "tags": ["avatar", "gimmick", "modular-avatar", "unity", "vrchat"]
     },
     {
       "termId": "term-08",
@@ -1433,12 +874,7 @@
       "title": "パーティクルライブの一歩目を",
       "description": "パーティクルライブの概要、Unityの基本操作、制作フロー、修了制作までの学習全体像を扱います。",
       "date": "2026-08-10",
-      "tags": [
-        "particle-live",
-        "production-flow",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["particle-live", "production-flow", "timeline", "unity"]
     },
     {
       "termId": "term-08",
@@ -1447,13 +883,7 @@
       "title": "パーティクルライブの目録を",
       "description": "Timelineの基本、キーフレームによる変化の作成、Animationウィンドウとの連携を扱います。",
       "date": "2026-08-11",
-      "tags": [
-        "animation",
-        "keyframe",
-        "particle-live",
-        "timeline",
-        "unity"
-      ]
+      "tags": ["animation", "keyframe", "particle-live", "timeline", "unity"]
     },
     {
       "termId": "term-08",
@@ -1462,12 +892,7 @@
       "title": "パーティクルライブの散在を",
       "description": "Particle Systemを構成する出現位置・色・大きさ・動き・Materialを理解し、既存素材を分解・改変する方法を扱います。",
       "date": "2026-08-17",
-      "tags": [
-        "material",
-        "particle-live",
-        "particle-system",
-        "unity"
-      ]
+      "tags": ["material", "particle-live", "particle-system", "unity"]
     },
     {
       "termId": "term-08",
@@ -1476,54 +901,34 @@
       "title": "パーティクルライブの現像を",
       "description": "Renderer・Material・Shaderの関係と、Particle Systemの描画や発光・視界ジャックなどの見せ方を扱います。",
       "date": "2026-08-18",
-      "tags": [
-        "material",
-        "particle-live",
-        "particle-system",
-        "shader",
-        "unity"
-      ]
+      "tags": ["material", "particle-live", "particle-system", "shader", "unity"]
     }
   ],
   "searchViews": [
     {
       "id": "unity-avatar",
       "label": "Unity / アバター",
-      "tags": [
-        "unity",
-        "avatar"
-      ]
+      "tags": ["unity", "avatar"]
     },
     {
       "id": "blender-modeling",
       "label": "Blender / モデリング",
-      "tags": [
-        "blender",
-        "modeling"
-      ]
+      "tags": ["blender", "modeling"]
     },
     {
       "id": "gimmick-animation",
       "label": "ギミック / Animation",
-      "tags": [
-        "gimmick",
-        "animation"
-      ]
+      "tags": ["gimmick", "animation"]
     },
     {
       "id": "world-debug",
       "label": "ワールド / デバッグ",
-      "tags": [
-        "world",
-        "debug"
-      ]
+      "tags": ["world", "debug"]
     },
     {
       "id": "particle-live",
       "label": "パーティクルライブ",
-      "tags": [
-        "particle-live"
-      ]
+      "tags": ["particle-live"]
     }
   ]
 }

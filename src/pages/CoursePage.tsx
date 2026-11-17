@@ -18,12 +18,18 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
     setSelectedTermId(initialTermId);
   }, [initialTermId]);
 
-  useDocumentTitle(course ? `${course.title} | 授業資料` : "科目 | UniMagic 過去期授業資料ライブラリ");
+  useDocumentTitle(
+    course ? `${course.title} | 授業資料` : "科目 | UniMagic 過去期授業資料ライブラリ",
+  );
 
   if (!course) {
     return (
       <>
-        <nav className="mb-[18px]"><a className="font-bold text-accent-strong no-underline" href="./index.html">科目一覧</a></nav>
+        <nav className="mb-[18px]">
+          <a className="font-bold text-accent-strong no-underline" href="./index.html">
+            科目一覧
+          </a>
+        </nav>
         <section className="mb-[30px] flex flex-col gap-2">
           <Notice tone="error">科目が見つかりません。</Notice>
         </section>
@@ -38,7 +44,11 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
 
   function selectTerm(termId: string) {
     setSelectedTermId(termId);
-    history.replaceState(null, "", `./course.html?id=${encodeURIComponent(currentCourse.id)}&term=${encodeURIComponent(termId)}`);
+    history.replaceState(
+      null,
+      "",
+      `./course.html?id=${encodeURIComponent(currentCourse.id)}&term=${encodeURIComponent(termId)}`,
+    );
   }
 
   function tagSearchHref(tag: string) {
@@ -47,9 +57,15 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
 
   return (
     <>
-      <nav className="mb-[18px]"><a className="font-bold text-accent-strong no-underline" href="./index.html">科目一覧</a></nav>
+      <nav className="mb-[18px]">
+        <a className="font-bold text-accent-strong no-underline" href="./index.html">
+          科目一覧
+        </a>
+      </nav>
       <section className="mb-[30px] flex flex-col gap-2">
-        <p className="m-0 max-w-[980px] text-[13px] font-extrabold tracking-normal text-accent-strong uppercase">Course</p>
+        <p className="m-0 max-w-[980px] text-[13px] font-extrabold tracking-normal text-accent-strong uppercase">
+          Course
+        </p>
         <h1 className="mt-1 mb-2 text-[clamp(30px,5vw,52px)] leading-[1.12]">{course.title}</h1>
         <p className="m-0 max-w-[980px] text-muted">{course.description || ""}</p>
         <TagRow tags={course.tags} hrefForTag={tagSearchHref} />
@@ -76,10 +92,17 @@ export function CoursePage({ catalog }: { catalog: Catalog }) {
       <section>
         <div className="mt-[34px] mb-3.5 flex items-center justify-between gap-4">
           <h2 className="m-0 text-xl">授業回</h2>
-          <a className="font-bold text-accent-strong no-underline" href={`./search.html?course=${encodeURIComponent(currentCourse.id)}`}>この科目を検索</a>
+          <a
+            className="font-bold text-accent-strong no-underline"
+            href={`./search.html?course=${encodeURIComponent(currentCourse.id)}`}
+          >
+            この科目を検索
+          </a>
         </div>
         <div className="grid gap-2" aria-live="polite">
-          {lessons.map((lesson) => <LessonCard key={lesson.id} catalog={catalog} lesson={lesson} />)}
+          {lessons.map((lesson) => (
+            <LessonCard key={lesson.id} catalog={catalog} lesson={lesson} />
+          ))}
           {!lessons.length && <Notice>この開講期の授業は登録されていません。</Notice>}
         </div>
       </section>

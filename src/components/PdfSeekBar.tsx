@@ -44,7 +44,11 @@ function PdfThumbnail({ pdf, pageNumber }: { pdf: PDFDocumentProxy; pageNumber: 
   return <canvas ref={canvasRef} hidden />;
 }
 
-export function PdfSeekBar({ pdf, pageNumber, onSelect }: {
+export function PdfSeekBar({
+  pdf,
+  pageNumber,
+  onSelect,
+}: {
   pdf: PDFDocumentProxy;
   pageNumber: number;
   onSelect: (pageNumber: number) => void;
@@ -54,7 +58,8 @@ export function PdfSeekBar({ pdf, pageNumber, onSelect }: {
   const pageCount = pdf.numPages;
   const progress = pageCount > 1 ? ((pageNumber - 1) / (pageCount - 1)) * 100 : 100;
   const previewPage = pointerPage ?? (keyboardFocused ? pageNumber : null);
-  const previewPosition = previewPage === null || pageCount < 2 ? 0.5 : (previewPage - 1) / (pageCount - 1);
+  const previewPosition =
+    previewPage === null || pageCount < 2 ? 0.5 : (previewPage - 1) / (pageCount - 1);
 
   function previewAtPointer(event: PointerEvent<HTMLInputElement>) {
     if (event.pointerType === "touch" && !event.buttons && event.type === "pointermove") return;
@@ -77,15 +82,22 @@ export function PdfSeekBar({ pdf, pageNumber, onSelect }: {
           <div
             aria-hidden="true"
             className="pointer-events-none absolute bottom-full z-10 mb-1 w-[124px] -translate-x-1/2 rounded-md border border-line bg-surface p-1 text-center text-xs font-bold tabular-nums text-ink shadow-md"
-            style={{ left: `clamp(62px, calc(${previewPosition * 100}% + ${thumbRadius * (1 - 2 * previewPosition)}px), 100% - 62px)` }}
+            style={{
+              left: `clamp(62px, calc(${previewPosition * 100}% + ${thumbRadius * (1 - 2 * previewPosition)}px), 100% - 62px)`,
+            }}
           >
             <div className="flex h-16 items-center justify-center overflow-hidden rounded-sm bg-surface-strong">
               <PdfThumbnail key={previewPage} pdf={pdf} pageNumber={previewPage} />
             </div>
-            <div className="mt-1">{previewPage} / {pageCount}</div>
+            <div className="mt-1">
+              {previewPage} / {pageCount}
+            </div>
           </div>
         )}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-line/90">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-1.5 bg-line/90"
+        >
           <div className="h-full bg-accent-strong" style={{ width: `${progress}%` }} />
         </div>
         <input

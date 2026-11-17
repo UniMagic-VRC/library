@@ -14,9 +14,11 @@ export function App() {
   const page = (document.body.dataset.page || "home") as Page;
 
   useEffect(() => {
-    loadCatalog().then(setCatalog).catch((loadError: unknown) => {
-      setError(loadError instanceof Error ? loadError.message : String(loadError));
-    });
+    loadCatalog()
+      .then(setCatalog)
+      .catch((loadError: unknown) => {
+        setError(loadError instanceof Error ? loadError.message : String(loadError));
+      });
   }, []);
 
   return (

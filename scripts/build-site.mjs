@@ -15,7 +15,14 @@ const distDir = path.join(root, "dist");
 const pdfCacheDir = process.env.PDF_CACHE_DIR
   ? path.resolve(root, process.env.PDF_CACHE_DIR)
   : path.join(root, ".cache", "pdf-materials");
-const regularFontPath = path.join(root, "node_modules", "@expo-google-fonts", "noto-sans-jp", "400Regular", "NotoSansJP_400Regular.ttf");
+const regularFontPath = path.join(
+  root,
+  "node_modules",
+  "@expo-google-fonts",
+  "noto-sans-jp",
+  "400Regular",
+  "NotoSansJP_400Regular.ttf",
+);
 const logoSvgPath = path.join(root, "public", "assets", "unimagic-logo.svg");
 const latestMaterialsUrl = "https://unimagic-vrc.github.io/library/";
 const qpdfExecutable = process.env.QPDF || "qpdf";
@@ -33,13 +40,20 @@ async function main() {
 
   const terms = [...meta.terms].sort((a, b) => b.startsAt.localeCompare(a.startsAt));
   const courses = [...meta.courses].sort((a, b) => a.title.localeCompare(b.title, "ja"));
-  const lessonMetaByKey = new Map(meta.lessons.map((lesson) => [lessonKey(lesson.termId, lesson.courseId, lesson.lessonNo), lesson]));
+  const lessonMetaByKey = new Map(
+    meta.lessons.map((lesson) => [
+      lessonKey(lesson.termId, lesson.courseId, lesson.lessonNo),
+      lesson,
+    ]),
+  );
   const materialFilesByKey = await collectMaterialFiles();
 
   for (const lesson of meta.lessons) {
     const key = lessonKey(lesson.termId, lesson.courseId, lesson.lessonNo);
     if (!materialFilesByKey.has(key)) {
-      errors.push(`資料PDFがありません: materials/${lesson.termId}/${lesson.courseId}/${lesson.lessonNo}.pdf`);
+      errors.push(
+        `資料PDFがありません: materials/${lesson.termId}/${lesson.courseId}/${lesson.lessonNo}.pdf`,
+      );
     }
   }
 
@@ -60,43 +74,54 @@ async function main() {
   const processedMaterialFilesByKey = await buildMaterials(materialFilesByKey, lessonMetaByKey);
 
   const latestCourseTermIds = latestCourseTermIdsByCourse(meta.lessons, terms);
-  const lessons = meta.lessons.map((lesson) => {
-    const key = lessonKey(lesson.termId, lesson.courseId, lesson.lessonNo);
-    const latestCourseTermId = latestCourseTermIds.get(lesson.courseId) || null;
-    const files = processedMaterialFilesByKey.get(key) || [];
-    const fileUpdatedAt = files
-      .map((file) => file.updatedAt)
-      .sort()
-      .at(-1);
-    const lastUpdated = lesson.date || fileUpdatedAt;
-    return {
-      id: key,
-      termId: lesson.termId,
-      courseId: lesson.courseId,
-      lessonNo: lesson.lessonNo,
-      title: lesson.title,
-      description: lesson.description || "",
-      date: lesson.date || null,
-      tags: lesson.tags || [],
-      lastUpdated,
-      isLatestForCourseTerm: lesson.termId === latestCourseTermId,
-      latestCourseTermId,
-      files: files.map(({ absolutePath, updatedAt, ...file }) => file)
-    };
-  }).sort((a, b) => {
-    const termCompare = termStartsAt(terms, b.termId).localeCompare(termStartsAt(terms, a.termId));
-    return termCompare || a.courseId.localeCompare(b.courseId) || a.lessonNo.localeCompare(b.lessonNo, "ja", { numeric: true });
-  });
+  const lessons = meta.lessons
+    .map((lesson) => {
+      const key = lessonKey(lesson.termId, lesson.courseId, lesson.lessonNo);
+      const latestCourseTermId = latestCourseTermIds.get(lesson.courseId) || null;
+      const files = processedMaterialFilesByKey.get(key) || [];
+      const fileUpdatedAt = files
+        .map((file) => file.updatedAt)
+        .sort()
+        .at(-1);
+      const lastUpdated = lesson.date || fileUpdatedAt;
+      return {
+        id: key,
+        termId: lesson.termId,
+        courseId: lesson.courseId,
+        lessonNo: lesson.lessonNo,
+        title: lesson.title,
+        description: lesson.description || "",
+        date: lesson.date || null,
+        tags: lesson.tags || [],
+        lastUpdated,
+        isLatestForCourseTerm: lesson.termId === latestCourseTermId,
+        latestCourseTermId,
+        files: files.map(({ absolutePath: _absolutePath, updatedAt: _updatedAt, ...file }) => file),
+      };
+    })
+    .sort((a, b) => {
+      const termCompare = termStartsAt(terms, b.termId).localeCompare(
+        termStartsAt(terms, a.termId),
+      );
+      return (
+        termCompare ||
+        a.courseId.localeCompare(b.courseId) ||
+        a.lessonNo.localeCompare(b.lessonNo, "ja", { numeric: true })
+      );
+    });
 
   const catalog = {
     generatedAt: new Date().toISOString(),
     terms,
     courses,
     lessons,
-    searchViews: meta.searchViews || []
+    searchViews: meta.searchViews || [],
   };
 
-  await fs.writeFile(path.join(distDir, "data", "catalog.json"), `${JSON.stringify(catalog, null, 2)}\n`);
+  await fs.writeFile(
+    path.join(distDir, "data", "catalog.json"),
+    `${JSON.stringify(catalog, null, 2)}\n`,
+  );
 
   console.log(`Generated ${lessons.length} lessons into ${path.relative(root, distDir)}`);
 }
@@ -138,9 +163,11 @@ function validateMetaShape(meta) {
     if (lessonKeys.has(key)) errors.push(`lesson が重複しています: ${key}`);
     lessonKeys.add(key);
     if (!termIds.has(lesson.termId)) errors.push(`lesson が未知の termId を参照しています: ${key}`);
-    if (!courseIds.has(lesson.courseId)) errors.push(`lesson が未知の courseId を参照しています: ${key}`);
+    if (!courseIds.has(lesson.courseId))
+      errors.push(`lesson が未知の courseId を参照しています: ${key}`);
     if (lesson.date) validateDate(lesson.date, `lesson ${key}.date`);
-    if (lesson.tags && !Array.isArray(lesson.tags)) errors.push(`lesson tags は配列にしてください: ${key}`);
+    if (lesson.tags && !Array.isArray(lesson.tags))
+      errors.push(`lesson tags は配列にしてください: ${key}`);
   }
 }
 
@@ -157,15 +184,21 @@ async function collectMaterialFiles() {
       for (const entry of await visibleEntries(coursePath)) {
         const absolutePath = path.join(coursePath, entry);
         if (await isDirectory(absolutePath)) {
-          errors.push(`授業資料は materials/<term>/<course>/<lesson>.pdf に配置してください: materials/${termId}/${courseId}/${entry}`);
+          errors.push(
+            `授業資料は materials/<term>/<course>/<lesson>.pdf に配置してください: materials/${termId}/${courseId}/${entry}`,
+          );
           continue;
         }
         if (!entry.endsWith(".pdf")) {
-          errors.push(`資料ファイルは .pdf のみ対応しています: materials/${termId}/${courseId}/${entry}`);
+          errors.push(
+            `資料ファイルは .pdf のみ対応しています: materials/${termId}/${courseId}/${entry}`,
+          );
           continue;
         }
         const lessonNo = normalizeLessonNo(entry.replace(/\.pdf$/i, ""));
-        byKey.set(lessonKey(termId, courseId, lessonNo), [await materialFile(absolutePath, termId, courseId, lessonNo)]);
+        byKey.set(lessonKey(termId, courseId, lessonNo), [
+          await materialFile(absolutePath, termId, courseId, lessonNo),
+        ]);
       }
     }
   }
@@ -180,7 +213,7 @@ async function materialFile(absolutePath, termId, courseId, lessonNo) {
     path: webPath(["materials", termId, courseId, name]),
     size: stat.size,
     updatedAt: toDateOnly(stat.mtime),
-    absolutePath
+    absolutePath,
   };
 }
 
@@ -207,12 +240,12 @@ async function buildMaterials(materialFilesByKey, lessonMetaByKey) {
           title: lesson.title,
           lastUpdated: lesson.date,
           contextPath: path.relative(root, file.absolutePath),
-          cacheStats
+          cacheStats,
         });
         const stat = await fs.stat(targetPath);
         processedFiles.push({
           ...file,
-          size: stat.size
+          size: stat.size,
         });
       }
 
@@ -226,7 +259,16 @@ async function buildMaterials(materialFilesByKey, lessonMetaByKey) {
   return processedByKey;
 }
 
-async function addNoticePages({ sourcePath, targetPath, noticePath, tempPath, title, lastUpdated, contextPath, cacheStats }) {
+async function addNoticePages({
+  sourcePath,
+  targetPath,
+  noticePath,
+  tempPath,
+  title,
+  lastUpdated,
+  contextPath,
+  cacheStats,
+}) {
   const cachePath = await pdfCachePath({ sourcePath, title, lastUpdated });
   if (await exists(cachePath)) {
     await fs.copyFile(cachePath, targetPath);
@@ -239,7 +281,7 @@ async function addNoticePages({ sourcePath, targetPath, noticePath, tempPath, ti
   await runCommand(
     qpdfExecutable,
     ["--warning-exit-0", "--empty", "--pages", noticePath, sourcePath, noticePath, "--", tempPath],
-    `PDF注意ページの挿入に失敗しました: ${contextPath}`
+    `PDF注意ページの挿入に失敗しました: ${contextPath}`,
   );
 
   await fs.mkdir(path.dirname(cachePath), { recursive: true });
@@ -249,7 +291,10 @@ async function addNoticePages({ sourcePath, targetPath, noticePath, tempPath, ti
 }
 
 async function pdfCachePath({ sourcePath, title, lastUpdated }) {
-  const [sourceBytes, { fontBytes, logoSvg }] = await Promise.all([fs.readFile(sourcePath), readPdfCacheInputs()]);
+  const [sourceBytes, { fontBytes, logoSvg }] = await Promise.all([
+    fs.readFile(sourcePath),
+    readPdfCacheInputs(),
+  ]);
   const key = createHash("sha256")
     .update(pdfCacheVersion)
     .update("\0")
@@ -259,12 +304,14 @@ async function pdfCachePath({ sourcePath, title, lastUpdated }) {
     .update("\0")
     .update(logoSvg)
     .update("\0")
-    .update(JSON.stringify({
-      title,
-      lastUpdated,
-      noticeText,
-      latestMaterialsUrl
-    }))
+    .update(
+      JSON.stringify({
+        title,
+        lastUpdated,
+        noticeText,
+        latestMaterialsUrl,
+      }),
+    )
     .digest("hex");
   return path.join(pdfCacheDir, `${key}.pdf`);
 }
@@ -273,7 +320,7 @@ async function readPdfCacheInputs() {
   if (!pdfCacheInputsCache) {
     pdfCacheInputsCache = Promise.all([
       fs.readFile(regularFontPath),
-      fs.readFile(logoSvgPath, "utf8")
+      fs.readFile(logoSvgPath, "utf8"),
     ]).then(([fontBytes, logoSvg]) => ({ fontBytes, logoSvg }));
   }
   return pdfCacheInputsCache;
@@ -289,7 +336,7 @@ async function createNoticePdf({ sourcePath, noticePath, title, lastUpdated, con
   try {
     const [sourceBytes, regularFontBytes] = await Promise.all([
       fs.readFile(sourcePath),
-      fs.readFile(regularFontPath)
+      fs.readFile(regularFontPath),
     ]);
     const sourcePdf = await PDFDocument.load(sourceBytes);
     const firstPage = sourcePdf.getPage(0);
@@ -306,7 +353,7 @@ async function createNoticePdf({ sourcePath, noticePath, title, lastUpdated, con
       regularFont,
       title,
       lastUpdated,
-      logo: await readLogoSvg()
+      logo: await readLogoSvg(),
     });
 
     await fs.writeFile(noticePath, await noticePdf.save());
@@ -327,12 +374,22 @@ function drawNoticePage(page, { width, height, regularFont, title, lastUpdated, 
   const labelSize = fitFontSize(label, regularFont, Math.min(18, height * 0.032), contentWidth);
   const titleSize = fitFontSize(title, regularFont, Math.min(34, height * 0.06), contentWidth);
   const titleLines = wrapText(title, regularFont, titleSize, contentWidth, 2);
-  const metaSize = fitFontSize(`最終更新日: ${lastUpdated}`, regularFont, Math.min(18, height * 0.032), contentWidth);
+  const metaSize = fitFontSize(
+    `最終更新日: ${lastUpdated}`,
+    regularFont,
+    Math.min(18, height * 0.032),
+    contentWidth,
+  );
   const bodySize = Math.max(12, Math.min(20, height * 0.033));
   const bodyLines = wrapText(noticeText, regularFont, bodySize, contentWidth, 4);
   const urlLabel = "最新の資料はこちら:";
   const urlLabelSize = Math.max(11, Math.min(16, height * 0.027));
-  const urlSize = fitFontSize(latestMaterialsUrl, regularFont, Math.min(18, height * 0.032), contentWidth);
+  const urlSize = fitFontSize(
+    latestMaterialsUrl,
+    regularFont,
+    Math.min(18, height * 0.032),
+    contentWidth,
+  );
   const titleGap = labelSize * 2.8;
   const ruleTopGap = Math.max(16, height * 0.025);
   const ruleBottomGap = Math.max(24, height * 0.045);
@@ -352,10 +409,21 @@ function drawNoticePage(page, { width, height, regularFont, title, lastUpdated, 
   }
 
   y = ruleY;
-  page.drawLine({ start: { x: margin, y }, end: { x: width - margin, y }, thickness: 1, color: rule });
+  page.drawLine({
+    start: { x: margin, y },
+    end: { x: width - margin, y },
+    thickness: 1,
+    color: rule,
+  });
   y -= ruleBottomGap;
 
-  page.drawText(`最終更新日: ${lastUpdated}`, { x: margin, y, size: metaSize, font: regularFont, color: muted });
+  page.drawText(`最終更新日: ${lastUpdated}`, {
+    x: margin,
+    y,
+    size: metaSize,
+    font: regularFont,
+    color: muted,
+  });
   y -= noticeGap;
 
   for (const line of bodyLines) {
@@ -367,12 +435,18 @@ function drawNoticePage(page, { width, height, regularFont, title, lastUpdated, 
   page.drawText(urlLabel, { x: margin, y, size: urlLabelSize, font: regularFont, color: accent });
   y -= urlGap;
 
-  page.drawText(latestMaterialsUrl, { x: margin, y, size: urlSize, font: regularFont, color: accent });
+  page.drawText(latestMaterialsUrl, {
+    x: margin,
+    y,
+    size: urlSize,
+    font: regularFont,
+    color: accent,
+  });
   page.drawLine({
     start: { x: margin, y: y - 3 },
     end: { x: margin + regularFont.widthOfTextAtSize(latestMaterialsUrl, urlSize), y: y - 3 },
     thickness: 0.8,
-    color: accent
+    color: accent,
   });
 
   drawLogo(page, { logo, width, margin });
@@ -381,15 +455,24 @@ function drawNoticePage(page, { width, height, regularFont, title, lastUpdated, 
 async function readLogoSvg() {
   if (!logoSvgCache) {
     logoSvgCache = fs.readFile(logoSvgPath, "utf8").then((svg) => {
-      const viewBox = svg.match(/viewBox="([^"]+)"/)?.[1]?.trim().split(/\s+/).map(Number);
+      const viewBox = svg
+        .match(/viewBox="([^"]+)"/)?.[1]
+        ?.trim()
+        .split(/\s+/)
+        .map(Number);
       const pathData = svg.match(/<path[^>]*\sd="([^"]+)"/)?.[1];
-      if (!viewBox || viewBox.length !== 4 || viewBox.some((value) => Number.isNaN(value)) || !pathData) {
+      if (
+        !viewBox ||
+        viewBox.length !== 4 ||
+        viewBox.some((value) => Number.isNaN(value)) ||
+        !pathData
+      ) {
         throw new Error(`${path.relative(root, logoSvgPath)} のSVGからロゴ情報を読み取れません。`);
       }
       return {
         pathData,
         width: viewBox[2],
-        height: viewBox[3]
+        height: viewBox[3],
       };
     });
   }
@@ -405,7 +488,7 @@ function drawLogo(page, { logo, width, margin }) {
     y: margin * 0.55 + logoHeight,
     scale,
     color: rgb(0, 0, 0),
-    opacity: 1
+    opacity: 1,
   });
 }
 
@@ -456,7 +539,9 @@ function latestCourseTermIdsByCourse(lessons, terms) {
       latestByCourse.set(lesson.courseId, { startsAt, termId: lesson.termId });
     }
   }
-  return new Map([...latestByCourse.entries()].map(([courseId, lesson]) => [courseId, lesson.termId]));
+  return new Map(
+    [...latestByCourse.entries()].map(([courseId, lesson]) => [courseId, lesson.termId]),
+  );
 }
 
 function termStartsAt(terms, termId) {
@@ -479,13 +564,18 @@ function requireFields(object, fields, label) {
 }
 
 function validateDate(value, label) {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(value) || Number.isNaN(new Date(`${value}T00:00:00Z`).getTime())) {
+  if (
+    !/^\d{4}-\d{2}-\d{2}$/.test(value) ||
+    Number.isNaN(new Date(`${value}T00:00:00Z`).getTime())
+  ) {
     errors.push(`${label} は YYYY-MM-DD 形式で指定してください: ${value}`);
   }
 }
 
 async function visibleEntries(dir) {
-  return (await fs.readdir(dir)).filter((entry) => !entry.startsWith(".")).sort((a, b) => a.localeCompare(b, "ja"));
+  return (await fs.readdir(dir))
+    .filter((entry) => !entry.startsWith("."))
+    .sort((a, b) => a.localeCompare(b, "ja"));
 }
 
 async function isDirectory(filePath) {
