@@ -1,4 +1,24 @@
+lefthook: pnpm exec lefthook
+
 pre-commit:
-  commands:
-    strip-pdf-metadata:
+  piped: true
+  exclude:
+    - ".cache/**"
+    - ".github/**"
+    - ".pnpm-store/**"
+    - "dist/**"
+    - "docs/coding-agent/**"
+    - "pnpm-lock.yaml"
+  jobs:
+    - name: lint
+      glob:
+        - "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
+        - "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}"
+      run: pnpm run lint -- {staged_files}
+    - name: format-check
+      glob:
+        - "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,css,html,json,jsonc,md,yaml,yml}"
+        - "**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,css,html,json,jsonc,md,yaml,yml}"
+      run: pnpm run format:check -- {staged_files}
+    - name: strip-pdf-metadata
       run: node scripts/strip-pdf-metadata.mjs

@@ -6,6 +6,9 @@
   "scripts": {
     "build": "tsc -b && vite build && node scripts/build-site.mjs",
     "dev": "vite",
+    "format": "oxfmt --write",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint --deny-warnings",
     "prepare": "lefthook install",
     "typecheck": "tsc -b"
   },
@@ -25,6 +28,8 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.2",
     "lefthook": "^2.1.10",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
     "tailwindcss": "^4.3.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.0"

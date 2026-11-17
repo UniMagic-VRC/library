@@ -25,11 +25,17 @@ export function findTerm(catalog: Catalog, id: string | null): Term | undefined 
   return catalog.terms.find((term) => term.id === id);
 }
 
-export function findLesson(catalog: Catalog, termId: string | null, courseId: string | null, lessonNo: string | null): Lesson | undefined {
-  return catalog.lessons.find((lesson) =>
-    lesson.termId === termId &&
-    lesson.courseId === courseId &&
-    lesson.lessonNo === normalizeLessonNo(lessonNo)
+export function findLesson(
+  catalog: Catalog,
+  termId: string | null,
+  courseId: string | null,
+  lessonNo: string | null,
+): Lesson | undefined {
+  return catalog.lessons.find(
+    (lesson) =>
+      lesson.termId === termId &&
+      lesson.courseId === courseId &&
+      lesson.lessonNo === normalizeLessonNo(lessonNo),
   );
 }
 
@@ -42,7 +48,9 @@ export function compareLessonNo(a: Lesson, b: Lesson): number {
 }
 
 export function compareLessonVersion(catalog: Catalog, a: Lesson, b: Lesson): number {
-  const termOrder = (findTerm(catalog, b.termId)?.startsAt || "").localeCompare(findTerm(catalog, a.termId)?.startsAt || "");
+  const termOrder = (findTerm(catalog, b.termId)?.startsAt || "").localeCompare(
+    findTerm(catalog, a.termId)?.startsAt || "",
+  );
   if (termOrder !== 0) return termOrder;
   return compareLessonNo(a, b);
 }
@@ -54,7 +62,11 @@ export function allTags(catalog: Catalog): string[] {
   return [...tags].sort((a, b) => a.localeCompare(b, "ja"));
 }
 
-export function selectedTagsMatch(catalog: Catalog, lesson: Lesson, selectedTags: Set<string>): boolean {
+export function selectedTagsMatch(
+  catalog: Catalog,
+  lesson: Lesson,
+  selectedTags: Set<string>,
+): boolean {
   if (!selectedTags.size) return true;
   const course = findCourse(catalog, lesson.courseId);
   const tags = new Set([...(course?.tags || []), ...(lesson.tags || [])]);
@@ -71,7 +83,7 @@ export function textMatches(catalog: Catalog, lesson: Lesson, query: string): bo
     lesson.description,
     lesson.lessonNo,
     ...(course?.tags || []),
-    ...(lesson.tags || [])
+    ...(lesson.tags || []),
   ]
     .join(" ")
     .toLowerCase()
@@ -111,7 +123,8 @@ function lessonAgeInMonths(lastUpdated: string | undefined): number | null {
   const updated = parseLessonDate(lastUpdated);
   if (!updated) return null;
   const today = new Date();
-  let months = (today.getFullYear() - updated.getFullYear()) * 12 + (today.getMonth() - updated.getMonth());
+  let months =
+    (today.getFullYear() - updated.getFullYear()) * 12 + (today.getMonth() - updated.getMonth());
   if (today.getDate() < updated.getDate()) months -= 1;
   return Math.max(0, months);
 }
@@ -127,7 +140,9 @@ function parseLessonDate(value: string | undefined): Date | null {
 
 export function formatDate(value: string | undefined): string {
   if (!value) return "-";
-  return new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium" }).format(new Date(`${value}T00:00:00`));
+  return new Intl.DateTimeFormat("ja-JP", { dateStyle: "medium" }).format(
+    new Date(`${value}T00:00:00`),
+  );
 }
 
 export function formatBytes(value: number): string {
